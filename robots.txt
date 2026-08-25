@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SITE_DOMAIN/sitemap.xml
+Sitemap: https://inadain.github.io/inada-clinic-qa/sitemap.xml

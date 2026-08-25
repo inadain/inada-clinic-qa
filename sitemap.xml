@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://SITE_DOMAIN/</loc></url>
-  <url><loc>https://SITE_DOMAIN/articles/first-visit.html</loc></url>
-  <url><loc>https://SITE_DOMAIN/articles/fever-when-to-visit.html</loc></url>
-  <url><loc>https://SITE_DOMAIN/articles/gastroscopy-pain.html</loc></url>
-  <url><loc>https://SITE_DOMAIN/articles/child-vaccine-schedule.html</loc></url>
-  <url><loc>https://SITE_DOMAIN/articles/shingles-vaccine.html</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/first-visit.html</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/fever-when-to-visit.html</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroscopy-pain.html</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-vaccine-schedule.html</loc></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/shingles-vaccine.html</loc></url>
 </urlset>
