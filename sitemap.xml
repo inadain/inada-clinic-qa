@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://inadain.github.io/inada-clinic-qa/</loc><priority>1.0</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/abi-pad.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/af-stroke.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/anemia.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/aspiration-pneumonia.html</loc><priority>0.8</priority></url>
@@ -8,6 +9,7 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/breathlessness.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chest-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chest-xray-shadow.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chickenpox.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-constipation.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-cough.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-fever.html</loc><priority>0.8</priority></url>
@@ -32,6 +34,7 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/flu-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/food-allergy.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gallstone.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastric-cancer-screening.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroenteritis.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroscopy-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gout-uric-acid.html</loc><priority>0.8</priority></url>
@@ -49,6 +52,7 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/hpv-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/ibs-bowel.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/insomnia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/je-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/kidney-function.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/knee-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/leg-swelling.html</loc><priority>0.8</priority></url>
