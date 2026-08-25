@@ -4,7 +4,10 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/blood-in-stool.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/breathlessness.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chest-pain.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-cough.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-fever.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-vaccine-schedule.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-vomiting.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/cholesterol.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chronic-cough.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/colonoscopy.html</loc><priority>0.8</priority></url>
@@ -13,23 +16,29 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/dizziness.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/ecg-abnormal.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/fainting-dizziness.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/fall-prevention.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/fatigue.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/fever-when-to-visit.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/first-visit.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/flu-or-covid.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/flu-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/food-allergy.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroenteritis.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroscopy-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gout-uric-acid.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/h-pylori.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/headache.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/health-check-service.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/health-checkup.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/heartburn-reflux.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/high-blood-pressure.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/hives.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/home-visit.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/ibs-bowel.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/knee-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/leg-swelling.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/palpitations.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/pneumococcal-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/pollen-allergy.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/rehab-therapy.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/shingles-symptoms.html</loc><priority>0.8</priority></url>
@@ -38,6 +47,7 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/sore-throat-strep.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/sputum-blood.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/stomach-pain.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/waiting-payment.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/weight-loss.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/wheezing-asthma.html</loc><priority>0.8</priority></url>
 </urlset>
