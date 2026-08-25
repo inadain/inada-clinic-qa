@@ -34,6 +34,10 @@
     "streetAddress": "玉島柏島920-106",
     "addressCountry": "JP"
   },
+  "sameAs": [
+    "https://www.instagram.com/inada.clinic/",
+    "https://www.facebook.com/profile.php?id=61576185361738"
+  ],
   "medicalSpecialty": ["内科", "呼吸器内科", "循環器内科", "感染症内科", "アレルギー科", "消化器内科", "小児科", "リハビリテーション科"],
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "07:00", "closes": "12:00" },
@@ -349,6 +353,11 @@
         <p class="faq-card__q">健診で腎臓の数値（eGFR）が低い、尿に蛋白が出ていると言われました。どうすればいいですか？</p>
         <p class="faq-card__excerpt">eGFRと尿蛋白が示すもの、慢性腎臓病（CKD）で気をつけたいこと、受診の目安をわかりやすくまとめました。</p>
       </a>
+      <a class="faq-card" href="articles/menopause.html" data-alias="更年期 ほてり のぼせ 汗 イライラ 50代">
+        <span class="faq-card__tag">更年期の不調</span>
+        <p class="faq-card__q">50代になってほてりやイライラ、だるさが続いています。更年期でしょうか？</p>
+        <p class="faq-card__excerpt">更年期に似た症状の裏に別の病気が隠れていることもあります。まず内科で確かめる意義を解説します。</p>
+      </a>
       <a class="faq-card" href="articles/numbness.html" data-alias="しびれ 手 足 ピリピリ 感覚">
         <span class="faq-card__tag">手足のしびれ</span>
         <p class="faq-card__q">手足がしびれます。放っておいても大丈夫でしょうか？</p>
@@ -630,12 +639,42 @@
       </div>
     </div>
 
-    <div class="author-box" style="margin-top:22px;">
-      <img src="assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
-      <div class="author-box__text">
-        <strong>医療法人 いなだ医院</strong>
-        内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を標榜し、地域のかかりつけ医として診療しています。本サイトの記事（全82件）は当院の医師が内容を確認しています。
+    <div class="doctors">
+      <div class="doctor-card">
+        <img src="assets/director.jpg" alt="いなだ医院の医師のイラスト" loading="lazy" width="96" height="96">
+        <p class="doctor-card__role">院長</p>
+        <p class="doctor-card__desc">地域のかかりつけ医として、内科全般から生活習慣病の管理まで幅広く診療しています。</p>
       </div>
+      <div class="doctor-card">
+        <img src="assets/doctor.jpg" alt="いなだ医院の医師のイラスト" loading="lazy" width="96" height="96">
+        <p class="doctor-card__role">医師</p>
+        <p class="doctor-card__desc">呼吸器・循環器・消化器の症状から在宅医療まで、幅広くご相談をお受けしています。</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; font-size:13px; color:var(--text-sub); margin:18px 0 0; line-height:1.85;">
+      内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を標榜し、<br>
+      訪問診療・訪問看護・複合介護施設もあわせて運営しています。<br>
+      本サイトの記事（全83件）は当院の医師が内容を確認しています。
+    </p>
+  </section>
+
+  <section class="sns-block">
+    <h2>最新のお知らせはSNSでも発信しています</h2>
+    <p>季節ごとの健康情報や、休診・ワクチンのご案内などをお届けしています。</p>
+    <div class="sns">
+      <a class="sns-ig" href="https://www.instagram.com/inada.clinic/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a class="sns-fb" href="https://www.facebook.com/profile.php?id=61576185361738" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7.2c0-.9.2-1.3 1.4-1.3H17V3.1C16.6 3 15.7 3 14.7 3 12.3 3 10.8 4.4 10.8 7v2H8.2v3.2h2.6V21H14v-8.8h2.5l.4-3.2z"/></svg>
+        Facebook
+      </a>
+      <a class="sns-gg" href="https://g.page/r/CdSuzqgGFKaBEAE/review" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        Googleマップ・クチコミ
+      </a>
     </div>
   </section>
 </main>
@@ -645,6 +684,11 @@
   <p>内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科</p>
   <p>〒713-8123 岡山県倉敷市玉島柏島920-106 ／ TEL：<a href="tel:0865250600">086-525-0600</a></p>
   <p><a href="https://www.inada-iin.com/">公式ホームページ</a> はこちら（院長紹介・施設のご案内・複合介護施設について）</p>
+  <div class="sns">
+    <a class="sns-ig" href="https://www.instagram.com/inada.clinic/" target="_blank" rel="noopener">Instagram</a>
+    <a class="sns-fb" href="https://www.facebook.com/profile.php?id=61576185361738" target="_blank" rel="noopener">Facebook</a>
+    <a class="sns-gg" href="https://g.page/r/CdSuzqgGFKaBEAE/review" target="_blank" rel="noopener">Googleマップ・クチコミ</a>
+  </div>
   <p>本サイトは一般的な情報提供を目的としており、診断・治療を保証するものではありません。気になる症状がある場合は当院までご相談ください。</p>
   <p>&copy; 医療法人 いなだ医院</p>
 </footer>

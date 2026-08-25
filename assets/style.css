@@ -715,3 +715,88 @@ section[id], article h2[id] { scroll-margin-top: 76px; }
   .sources a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
   a { color: #000; text-decoration: none; }
 }
+
+/* ---------- SNSリンク ---------- */
+.sns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0 4px;
+}
+.sns a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  transition: .16s;
+}
+.sns a:hover { text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+.sns svg { width: 17px; height: 17px; flex-shrink: 0; }
+.sns .sns-ig:hover { border-color: #c1358a; color: #c1358a; }
+.sns .sns-fb:hover { border-color: #1877f2; color: #1877f2; }
+.sns .sns-gg:hover { border-color: #1a73e8; color: #1a73e8; }
+
+.sns-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.sns-block h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--primary-dark);
+  margin: 0 0 6px;
+}
+.sns-block p { font-size: 13.5px; color: var(--text-sub); margin: 0; }
+
+/* ---------- 医師紹介 ---------- */
+.doctors {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.doctor-card {
+  flex: 1 1 190px;
+  max-width: 230px;
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 16px 14px 14px;
+  text-align: center;
+}
+.doctor-card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 16%;
+  margin: 0 auto 10px;
+  background: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 10px rgba(31,90,78,.12);
+}
+.doctor-card__role {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  color: var(--primary-dark);
+  margin: 0 0 4px;
+}
+.doctor-card__desc { font-size: 12.4px; color: var(--text-sub); margin: 0; line-height: 1.7; }
+
+@media (max-width: 600px) {
+  .sns a { font-size: 12.4px; padding: 8px 13px; }
+  .doctor-card { flex: 1 1 140px; padding: 13px 10px 11px; }
+  .doctor-card img { width: 74px; height: 74px; }
+}
