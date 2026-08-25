@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://inadain.github.io/inada-clinic-qa/</loc><priority>1.0</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-resp.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-cardio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-gastro.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-general.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-infect.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-allergy.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-rehab.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-child.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-care.html</loc><priority>0.9</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/category/cat-visit.html</loc><priority>0.9</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/abi-pad.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/af-stroke.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/anemia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/arteriosclerosis.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/aspiration-pneumonia.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/blood-in-stool.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/breathlessness.html</loc><priority>0.8</priority></url>
