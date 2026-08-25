@@ -800,3 +800,96 @@ section[id], article h2[id] { scroll-margin-top: 76px; }
   .doctor-card { flex: 1 1 140px; padding: 13px 10px 11px; }
   .doctor-card img { width: 74px; height: 74px; }
 }
+
+/* ================================================================
+   スマホ表示の最適化
+   ================================================================ */
+@media (max-width: 700px) {
+  /* 読みやすさ：本文をやや大きく、行間を詰めすぎない */
+  body { font-size: 16px; line-height: 1.85; }
+  article.qa p,
+  article.qa ul,
+  article.qa ol { font-size: 15.5px; }
+
+  /* 見出しの窮屈さを解消 */
+  article.qa .qa-question { font-size: 20px; line-height: 1.5; }
+  article.qa h2 { font-size: 17px; margin: 30px 0 11px; }
+
+  /* 目次は折りたためるように（details化した場合の見た目） */
+  .toc { padding: 14px 16px; }
+  .toc li { margin-bottom: 7px; }
+
+  /* タップ領域を最低44pxに */
+  .category-nav a,
+  .quick-tags a,
+  .more-in-cat__list a,
+  .sns a { min-height: 40px; display: inline-flex; align-items: center; }
+  .related a { padding: 13px 14px; }
+  .toc a { display: inline-block; padding: 3px 0; }
+
+  /* 横スクロールの発生を防ぐ */
+  body { overflow-x: hidden; }
+  article.qa { word-break: break-word; overflow-wrap: anywhere; }
+
+  /* ヒーローの文字量を調整 */
+  .hero-visual h1 { font-size: 24px; }
+  .hero-visual p { font-size: 14px; }
+}
+
+/* 目次の折りたたみ（details/summary） */
+details.toc > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+details.toc > summary::-webkit-details-marker { display: none; }
+details.toc > summary::before { content: "📋"; font-size: 14px; }
+details.toc > summary::after {
+  content: "▼";
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-sub);
+  transition: transform .2s;
+}
+details.toc[open] > summary::after { transform: rotate(180deg); }
+details.toc > ol { margin-top: 10px; }
+
+/* ================================================================
+   表示モード切り替え（スマホでPC版レイアウトを見る）
+   ================================================================ */
+.view-toggle {
+  text-align: center;
+  padding: 4px 0 18px;
+}
+.view-toggle button {
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  color: var(--text-sub);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: .16s;
+}
+.view-toggle button:hover { border-color: var(--primary); color: var(--primary-dark); }
+
+/* PC版表示を強制されたとき：viewportを固定幅にしてPCレイアウトを再現 */
+html.force-desktop body { min-width: 1024px; }
+html.force-desktop .site-header__cta { display: flex !important; }
+html.force-desktop .site-header__sub { display: block !important; }
+html.force-desktop .mobile-cta { display: none !important; }
+html.force-desktop body { padding-bottom: 0 !important; }
+html.force-desktop .info-grid { grid-template-columns: 1fr 1fr !important; }
+html.force-desktop .hero-visual { min-height: 340px !important; }
+html.force-desktop .hero-visual h1 { font-size: 30px !important; }
+
+/* PC表示ではトグル自体を隠す（スマホ幅のときだけ出す） */
+.view-toggle { display: none; }
+@media (max-width: 700px) { .view-toggle { display: block; } }
+html.force-desktop .view-toggle { display: block !important; }

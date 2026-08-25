@@ -93,3 +93,85 @@
     });
   });
 })();
+
+/* ---------------------------------------------------------------
+   表示モードの切り替え（スマホ ⇄ PC版レイアウト）
+   選択は localStorage に保存し、次回以降も維持する
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+
+  var KEY = 'inada-view-mode';
+  var vp = document.querySelector('meta[name="viewport"]');
+  if (!vp) return;
+
+  var MOBILE_VP = 'width=device-width, initial-scale=1.0';
+  var DESKTOP_VP = 'width=1024';
+
+  function apply(mode) {
+    if (mode === 'desktop') {
+      document.documentElement.classList.add('force-desktop');
+      vp.setAttribute('content', DESKTOP_VP);
+    } else {
+      document.documentElement.classList.remove('force-desktop');
+      vp.setAttribute('content', MOBILE_VP);
+    }
+    var btn = document.getElementById('view-toggle-btn');
+    if (btn) {
+      btn.textContent = (mode === 'desktop') ? '📱 スマホ版で表示する' : '🖥 PC版で表示する';
+      btn.setAttribute('aria-label', btn.textContent);
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) { /* プライベートモード等 */ }
+  if (saved === 'desktop') apply('desktop');
+
+  function mount() {
+    if (document.querySelector('.view-toggle')) return;
+    var footer = document.querySelector('.site-footer');
+    if (!footer) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'view-toggle';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'view-toggle-btn';
+    btn.textContent = (saved === 'desktop') ? '📱 スマホ版で表示する' : '🖥 PC版で表示する';
+    btn.addEventListener('click', function () {
+      var next = document.documentElement.classList.contains('force-desktop') ? 'mobile' : 'desktop';
+      apply(next);
+      try { localStorage.setItem(KEY, next); } catch (e) { /* 保存できなくても動作は継続 */ }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    wrap.appendChild(btn);
+    footer.parentNode.insertBefore(wrap, footer);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  } else {
+    mount();
+  }
+})();
+
+/* ---------------------------------------------------------------
+   目次：スマホでは折りたたんで表示する
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var toc = document.querySelector('nav.toc');
+  if (!toc) return;
+  if (!window.matchMedia || !window.matchMedia('(max-width: 700px)').matches) return;
+
+  var title = toc.querySelector('.toc__title');
+  var list = toc.querySelector('ol');
+  if (!title || !list) return;
+
+  var d = document.createElement('details');
+  d.className = 'toc';
+  var sm = document.createElement('summary');
+  sm.textContent = title.textContent;
+  d.appendChild(sm);
+  d.appendChild(list);
+  toc.parentNode.replaceChild(d, toc);
+})();
