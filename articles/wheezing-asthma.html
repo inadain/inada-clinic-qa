@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -122,24 +125,27 @@
 
     <h2 id="sec-2">受診の目安</h2>
     <p>喘鳴は自然に治まることもありますが、様子を見ないほうがよい場合もあります。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>息苦しくて横になれない、座っていないと呼吸がつらい</li>
-      <li>会話が途切れ、続けて話せないほど息が苦しい</li>
-      <li>唇や爪の色が青紫っぽい、顔色が悪い、意識がぼんやりしている</li>
-      <li>急に強い息苦しさが出た、胸の痛みを伴う</li>
-      <li>食べ物や異物をのどに詰まらせた直後から音が出はじめた</li>
-    </ul>
-    <p>これらに当てはまる場合は、救急外来の受診や救急要請もご検討ください。</p>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>ゼーゼー・ヒューヒューが数日以上続いている、繰り返している</li>
-      <li>夜間や明け方に咳や息苦しさで目が覚めることがある</li>
-      <li>階段や坂道での息切れが以前より強くなってきた</li>
-      <li>風邪は治ったのに咳や喘鳴だけが残っている</li>
-      <li>特定の季節・場所・ペットとの接触で症状が出やすい</li>
-      <li>喫煙歴がある、またはご家族に喘息やアレルギーの方がいる</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>会話が途切れて続けて話せない、唇や爪の色が青紫・白っぽい、苦しくて動けない、意識がぼんやりしている</strong>：喘息の重い発作（大発作）などでみられる状態とされ、この場合はためらわず救急要請（119番）をご検討ください</li>
+        <li>息苦しくて横になれない、座っていないと呼吸がつらい</li>
+        <li>急に強い息苦しさが出た、胸の痛みを伴う</li>
+        <li>いつもの吸入などで対処しても、症状がくり返し戻ってしまう</li>
+        <li>食べ物や異物をのどに詰まらせた直後から音が出はじめた</li>
+      </ul>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>ゼーゼー・ヒューヒューが数日以上続いている、繰り返している</li>
+        <li>夜間や明け方に咳や息苦しさで目が覚めることがある</li>
+        <li>階段や坂道での息切れが以前より強くなってきた</li>
+        <li>風邪は治ったのに咳や喘鳴だけが残っている</li>
+        <li>特定の季節・場所・ペットとの接触で症状が出やすい</li>
+        <li>喫煙歴がある、またはご家族に喘息やアレルギーの方がいる</li>
+      </ul>
+    </div>
 
     <h2 id="sec-3">当院での対応</h2>
     <p>いなだ医院は内科・呼吸器内科に加えてアレルギー科・循環器内科を標榜しており、喘鳴の背景として気管支喘息を考える場合も、心臓や他の病気の可能性を整理したい場合も、まとめてご相談いただけます。診察では、いつ・どんなときに音が出るかをうかがい、聴診で呼吸音を確認したうえで、必要に応じて胸部レントゲンや血液検査、呼吸機能検査などを行い、状態に応じた対応をご提案します。アレルギーの関与が疑われる場合には、何に反応しやすい体質かを調べる検査についてもご相談いただけます。当院は朝7時から診療しており、お仕事前の受診も可能です。診断や治療方針は診察の結果によって異なりますので、まずはお気軽にご来院ください。</p>
@@ -152,6 +158,17 @@
       <li>これまでの喘息やアレルギーの指摘、喫煙歴、現在服用中のお薬</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://www.jrs.or.jp/citizen/faq/q16.html" target="_blank" rel="noopener">Q16. 息がゼーゼー、ヒューヒューし、息苦しくなります。（日本呼吸器学会 呼吸器Q&amp;A）</a></li>
+        <li><a href="https://www.jrs.or.jp/citizen/disease/c/c-01.html" target="_blank" rel="noopener">C-01 気管支ぜんそく（日本呼吸器学会 呼吸器の病気）</a></li>
+        <li><a href="https://www.jrs.or.jp/citizen/faq/q12.html" target="_blank" rel="noopener">Q12. 夜間や早朝に呼吸が苦しくなります。（日本呼吸器学会 呼吸器Q&amp;A）</a></li>
+        <li><a href="https://allergyportal.jp/knowledge/adult-asthma/" target="_blank" rel="noopener">成人のぜん息（アレルギーポータル／一般社団法人 日本アレルギー学会）</a></li>
+        <li><a href="https://www.jspaci.jp/gcontents/childhood-asthma-guideline/" target="_blank" rel="noopener">患者さん向け 小児ぜん息治療ガイドライン（日本小児アレルギー学会）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -162,7 +179,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

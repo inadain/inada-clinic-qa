@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -118,21 +121,27 @@
 
     <h2 id="sec-2">受診の目安</h2>
     <p>胸やけ・呑酸は日常的な症状ですが、次のようなサインがあるときは、様子を見ずに医療機関にご相談いただくのが安心です。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>食べ物や飲み物が飲み込みにくい、つかえる感じがある</li>
-      <li>黒いタール状の便が出る、吐いたものに血が混じる</li>
-      <li>思い当たる理由がないのに体重が減ってきた</li>
-      <li>締めつけられるような強い胸の痛みや、冷や汗・息切れを伴う（心臓の病気との区別が必要な場合があります）</li>
-    </ul>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>胸やけや呑酸が数週間以上くり返している</li>
-      <li>市販薬を使っても改善しない、または中止するとすぐぶり返す</li>
-      <li>夜間に症状で目が覚める、横になると強くなる</li>
-      <li>長引く咳、声のかすれ、のどの違和感が続いている（逆流が関係する場合があります）</li>
-      <li>50歳以降で初めてこうした症状が出てきた、または家族に胃や食道の病気の方がいる</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>締めつけられるような強い胸の痛み</strong>があり、冷や汗・息切れ・肩やあごへ広がる痛みを伴う（心筋梗塞など心臓の病気との区別が必要です。この場合はためらわず救急要請（119番）をご検討ください）</li>
+        <li><strong>吐いたものに血が混じる</strong>、または<strong>黒いタール状の便</strong>が出る</li>
+        <li>食べ物や飲み物が<strong>飲み込めない・強くつかえる</strong>、飲み込むときに痛む</li>
+        <li>思い当たる理由がないのに体重が減ってきた</li>
+      </ul>
+      <p style="font-size:13.5px; margin:10px 0 0;">吐血・黒色便は消化管からの出血、飲み込みにくさや体重減少は食道・胃の病気が背景にある場合があり、早急な確認が必要とされているサインです。診療時間外であれば救急外来の受診もご検討ください。</p>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>胸やけや呑酸が数週間以上くり返している</li>
+        <li>市販薬を使っても改善しない、または中止するとすぐぶり返す</li>
+        <li>夜間に症状で目が覚める、横になると強くなる</li>
+        <li>長引く咳、声のかすれ、のどの違和感が続いている（逆流が関係する場合があります）</li>
+        <li>50歳以降で初めてこうした症状が出てきた、または家族に胃や食道の病気の方がいる</li>
+        <li>症状のために食事や睡眠がとりづらく、生活に支障が出ている</li>
+      </ul>
+    </div>
 
     <h2 id="sec-3">ご家庭でできる生活習慣の工夫</h2>
     <p>お薬の有無にかかわらず、次のような工夫は逆流を起こしにくくする助けになるとされています。</p>
@@ -156,6 +165,17 @@
       <li>現在治療中の病気や、飲んでいるお薬があるか</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/gerd_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「胃食道逆流症（GERD）」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/fd_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「機能性ディスペプシア（FD）」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/kaiyou_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「消化性潰瘍」2023（日本消化器病学会）</a></li>
+        <li><a href="https://ganjoho.jp/public/cancer/esophagus/about.html" target="_blank" rel="noopener">食道がんについて（国立がん研究センター がん情報サービス）</a></li>
+        <li><a href="https://ganjoho.jp/public/cancer/stomach/about.html" target="_blank" rel="noopener">胃がんについて（国立がん研究センター がん情報サービス）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -166,7 +186,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

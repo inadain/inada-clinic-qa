@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -115,26 +118,32 @@
 
     <h2 id="sec-2">受診の目安</h2>
     <p>次のような症状がある場合は、大腸の検査を含めて詳しく調べることが検討されます。国内の学会の資料でも、以下のような所見は「警告徴候（アラームサイン）」として、器質的な病気の可能性を確認する目安に挙げられています。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>便に血が混じる、黒っぽい便が出る</li>
-      <li>ダイエットをしていないのに体重が減ってきた（半年以内に3kg以上など）</li>
-      <li>発熱や関節の痛みをともなう</li>
-      <li>夜中に腹痛や下痢で目が覚める</li>
-      <li>強い腹痛が続く、おなかにしこりのようなものを感じる</li>
-      <li>下痢や嘔吐で水分がとれず、ぐったりしている</li>
-      <li>貧血を指摘されている、顔色が悪いと言われる</li>
-    </ul>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>便秘と下痢をくり返す状態が数か月以上続いている</li>
-      <li>腹痛や腹部の張りで、外出・通勤・通学に支障が出ている</li>
-      <li>トイレの場所が気になって行動を制限してしまう</li>
-      <li>50歳を過ぎてから初めてこうした症状が出てきた</li>
-      <li>ご家族に大腸の病気の方がいる、ご自身に大腸の病気の既往がある</li>
-      <li>便の形や太さ、回数が以前と明らかに変わってきた</li>
-      <li>市販薬を使い続けているが、思うように改善しない</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>便に血が混じる</strong>、または<strong>黒っぽいタール状の便</strong>が出る</li>
+        <li><strong>強い腹痛</strong>が続く、おなかにしこりのようなものを感じる、便もガスも出ない</li>
+        <li>下痢や嘔吐で<strong>水分がとれず、ぐったりしている</strong>（尿が出ない、立ちくらみがする）</li>
+        <li>ダイエットをしていないのに体重が減ってきた（半年以内に3kg以上など）</li>
+        <li>発熱や関節の痛みをともなう</li>
+        <li>夜中に腹痛や下痢で目が覚める</li>
+        <li>貧血を指摘されている、顔色が悪いと言われる</li>
+      </ul>
+      <p style="font-size:13.5px; margin:10px 0 0;">これらは「警告徴候（アラームサイン）」として、炎症性腸疾患や大腸の腫瘍など、腸そのものの病気を確認する目安に挙げられているものです。診療時間外であれば救急外来の受診もご検討ください。</p>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>便秘と下痢をくり返す状態が数か月以上続いている</li>
+        <li>腹痛や腹部の張りで、外出・通勤・通学に支障が出ている</li>
+        <li>トイレの場所が気になって行動を制限してしまう</li>
+        <li>50歳を過ぎてから初めてこうした症状が出てきた</li>
+        <li>ご家族に大腸の病気の方がいる、ご自身に大腸の病気の既往がある</li>
+        <li>便の形や太さ、回数が以前と明らかに変わってきた</li>
+        <li>市販薬を使い続けているが、思うように改善しない</li>
+        <li>便潜血検査で陽性を指摘されたまま、精密検査を受けていない</li>
+      </ul>
+    </div>
     <p>警告徴候にあてはまらない場合でも、症状が長く続いてお困りであれば受診の対象になります。「検査で異常がなかったから治療できない」わけではなく、生活面の工夫やお薬による調整で、日常生活への支障をやわらげることを目指していきます。</p>
 
     <h2 id="sec-3">当院での対応</h2>
@@ -152,6 +161,17 @@
       <li>健診で指摘されている項目、これまでに受けた胃・大腸の検査</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/ibs_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「過敏性腸症候群（IBS）」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/ibd_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「炎症性腸疾患（IBD）」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/cp_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「大腸ポリープ」2023（日本消化器病学会）</a></li>
+        <li><a href="https://ganjoho.jp/public/cancer/colon/about.html" target="_blank" rel="noopener">大腸がんについて（国立がん研究センター がん情報サービス）</a></li>
+        <li><a href="https://ganjoho.jp/public/pre_scr/screening/colon.html" target="_blank" rel="noopener">大腸がん検診について（国立がん研究センター がん情報サービス）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -162,7 +182,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -122,23 +125,29 @@
 
     <h2 id="sec-2">受診の目安</h2>
     <p>症状の感じ方には個人差があります。次のような場合は、一度呼吸器内科でご相談いただくことをおすすめします。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>安静にしていても息苦しい、呼吸が浅く速い感じが続く</li>
-      <li>血の混じった痰が出た</li>
-      <li>唇や指先が紫っぽく見える</li>
-      <li>急に息切れが強くなった、いつもの動作ができないほど苦しい</li>
-      <li>胸の痛みや強い動悸を伴う</li>
-    </ul>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>咳や痰が3週間以上続いている</li>
-      <li>同年代の人と歩くと自分だけ遅れる、坂道で立ち止まるようになった</li>
-      <li>健診で「肺の影」「肺機能の低下」などを指摘された</li>
-      <li>喫煙歴が長く（おおよそ20年以上など）、これまで肺の検査を受けたことがない</li>
-      <li>体重が思い当たる理由なく減ってきた</li>
-      <li>禁煙を考えているが、今の肺の状態を知ったうえで判断したい</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>安静にしていても息苦しい、唇や指先が紫っぽい、意識がぼんやりする</strong>：呼吸の状態が急に悪くなっているおそれがあるとされ、この場合はためらわず救急要請（119番）をご検討ください</li>
+        <li>急に息切れが強くなった、いつもの動作ができないほど苦しい</li>
+        <li>呼吸が浅く速い感じが続く</li>
+        <li>血の混じった痰が出た</li>
+        <li>胸の痛みや強い動悸を伴う</li>
+        <li>発熱とともに、咳・痰・息苦しさが2日以上いつもより悪化している（増悪）</li>
+      </ul>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>咳や痰が3週間以上続いている</li>
+        <li>同年代の人と歩くと自分だけ遅れる、坂道で立ち止まるようになった</li>
+        <li>かぜをひくと治りにくく、咳や痰だけが長く残る</li>
+        <li>健診で「肺の影」「肺機能の低下」などを指摘された</li>
+        <li>喫煙歴が長く（おおよそ20年以上など）、これまで肺の検査を受けたことがない</li>
+        <li>体重が思い当たる理由なく減ってきた</li>
+        <li>禁煙を考えているが、今の肺の状態を知ったうえで判断したい</li>
+      </ul>
+    </div>
 
     <h2 id="sec-3">当院での対応・検査</h2>
     <p>当院は内科・呼吸器内科を標榜しており、症状のご相談から検査までを一連で行っています。診察では、いつからどんなときに症状が出るか、喫煙の期間や本数などをうかがったうえで、聴診と必要な検査を組み合わせて評価します。</p>
@@ -160,6 +169,17 @@
     </ul>
     <p>お薬手帳をお持ちの方は、あわせてご持参ください。</p>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://www.jrs.or.jp/citizen/disease/b/b-01.html" target="_blank" rel="noopener">B-01 慢性閉塞性肺疾患（COPD）（日本呼吸器学会 呼吸器の病気）</a></li>
+        <li><a href="https://www.jrs.or.jp/citizen/faq/q02.html" target="_blank" rel="noopener">Q2. せきとたんが3週間以上続きます。（日本呼吸器学会 呼吸器Q&amp;A）</a></li>
+        <li><a href="https://www.jrs.or.jp/citizen/faq/q10.html" target="_blank" rel="noopener">Q10. 坂道や階段を登る時、息が切れます。（日本呼吸器学会 呼吸器Q&amp;A）</a></li>
+        <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/tobacco/index.html" target="_blank" rel="noopener">たばこと健康に関する情報ページ（厚生労働省）</a></li>
+        <li><a href="https://ganjoho.jp/public/pre_scr/screening/lung.html" target="_blank" rel="noopener">肺がん検診について（国立がん研究センター がん情報サービス）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -170,7 +190,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

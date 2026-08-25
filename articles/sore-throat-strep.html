@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -123,24 +126,29 @@
 
     <h2 id="sec-4">受診の目安</h2>
     <p>のどの痛みは自然によくなることも多い症状ですが、次のようなサインがあるときは注意が必要とされています。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li><strong>唾も飲み込めない</strong>、水分がまったく取れない</li>
-      <li><strong>息が苦しい</strong>、息を吸うときにゼーゼー・ヒューヒューという音がする、横になると呼吸がつらい</li>
-      <li><strong>口が大きく開けられない（開口障害）</strong>、片側だけのどが強く痛む</li>
-      <li>声がこもる、よだれが垂れてしまう、首が腫れて痛む</li>
-      <li>ぐったりして意識がはっきりしない、尿がほとんど出ない</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>息が苦しい</strong>、息を吸うときにゼーゼー・ヒューヒューという音がする、横になると呼吸がつらい ── 気道が狭くなっている可能性があり、ためらわず救急要請（119番）をご検討ください</li>
+        <li><strong>唾も飲み込めない</strong>、水分がまったく取れない、よだれが垂れてしまう</li>
+        <li><strong>口が大きく開けられない（開口障害）</strong>、片側だけのどが強く痛む</li>
+        <li>声がこもる、首が腫れて痛む、首を動かすと痛い</li>
+        <li>ぐったりして意識がはっきりしない、尿がほとんど出ない</li>
+      </ul>
+    </div>
     <p>これらは扁桃の周囲に膿がたまった状態や、のどの奥（喉頭蓋）が腫れて気道が狭くなる状態など、急を要する病気の可能性が指摘されています。ためらわずにすぐ医療機関へご連絡いただくか、夜間・休日であれば救急外来の受診もご検討ください。</p>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>38度以上の熱と強いのどの痛みが続き、咳や鼻水はあまりない</li>
-      <li>のどの痛みが3日以上よくならない、いったん下がった熱が再び上がってきた</li>
-      <li>扁桃に白いものが付いている、首のリンパ節が腫れて押すと痛い</li>
-      <li>ご家族や職場・学校で溶連菌感染症と診断された方がいる</li>
-      <li>発疹が出てきた、体がだるくて食事や水分が思うように取れない</li>
-      <li>持病がある方、妊娠中の方、ご高齢の方、小さなお子さん</li>
-    </ul>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>38度以上の熱と強いのどの痛みが続き、咳や鼻水はあまりない</li>
+        <li>のどの痛みが3日以上よくならない、いったん下がった熱が再び上がってきた</li>
+        <li>扁桃に白いものが付いている、首のリンパ節が腫れて押すと痛い</li>
+        <li>ご家族や職場・学校で溶連菌感染症と診断された方がいる</li>
+        <li>発疹が出てきた、舌が赤くぶつぶつして見える</li>
+        <li>体がだるくて食事や水分が思うように取れない</li>
+        <li>持病がある方、妊娠中の方、ご高齢の方、小さなお子さん</li>
+      </ul>
+    </div>
 
     <h2 id="sec-5">当院での対応</h2>
     <p>いなだ医院では内科・感染症内科・小児科として、のどの痛みや発熱の診療を行っています。診察でのどの状態や首のリンパ節を確認したうえで、必要と判断した場合には溶連菌の迅速検査や、インフルエンザ・新型コロナウイルスの検査、血液検査などを組み合わせて原因を調べていきます。結果をふまえて、抗菌薬による治療が必要な状態か、水分・安静と症状をやわらげる対応で経過をみる状態かをご説明します。</p>
@@ -155,6 +163,15 @@
       <li>持病や普段お飲みの薬、これまでに薬で体に合わなかった経験があるか</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://idsc.tmiph.metro.tokyo.lg.jp/diseases/group-a/" target="_blank" rel="noopener">A群溶血性レンサ球菌咽頭炎（東京都感染症情報センター／東京都健康安全研究センター）</a></li>
+        <li><a href="https://id-info.jihs.go.jp/" target="_blank" rel="noopener">感染症情報提供サイト（国立健康危機管理研究機構）</a></li>
+        <li><a href="https://www.jibika.or.jp/modules/disease/" target="_blank" rel="noopener">耳鼻咽喉科・頭頸部外科が扱う代表的な病気 INDEX（日本耳鼻咽喉科頭頸部外科学会）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -165,7 +182,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

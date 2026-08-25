@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -133,21 +136,26 @@
 
     <h2 id="sec-4">受診の目安</h2>
     <p>多くは自宅で経過をみられますが、次のような場合は医療機関にご相談ください。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>水分がまったく摂れない、飲んでもすぐに吐いてしまう</li>
-      <li>半日以上おしっこが出ていない、ぐったりして呼びかけへの反応が鈍い</li>
-      <li>血便や黒い便が出る、我慢できないほどの強い腹痛がある</li>
-      <li>高熱が続く、意識がもうろうとする</li>
-    </ul>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>小さなお子さんや高齢の方で、食事や水分の量が普段よりかなり減っている</li>
-      <li>糖尿病や腎臓・心臓の病気などで治療中の方、利尿薬などを服用中の方</li>
-      <li>嘔吐や下痢が数日たっても軽くならない、いったん良くなったのにぶり返した</li>
-      <li>同じ食事をした方が同時に体調を崩している</li>
-      <li>お仕事や学校の関係で、いつから復帰してよいかの判断に迷う</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>脱水のサイン</strong>：半日以上おしっこが出ていない（乳幼児ではおむつが濡れない）、唇や口の中が乾いている、涙が出ない、ぐったりして呼びかけへの反応が鈍い</li>
+        <li>水分がまったく摂れない、飲んでもそのたびに吐いてしまう状態が続く</li>
+        <li><strong>血便</strong>や黒っぽい便が出る</li>
+        <li><strong>我慢できないほどの激しい腹痛</strong>、お腹の一か所を押すと強く痛む、痛みがどんどん強くなる</li>
+        <li>高熱が続く、意識がもうろうとする、けいれんを起こした ── このような場合は救急要請（119番）もご検討ください</li>
+      </ul>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>小さなお子さんや高齢の方で、食事や水分の量が普段よりかなり減っている</li>
+        <li>糖尿病や腎臓・心臓の病気などで治療中の方、利尿薬などを服用中の方</li>
+        <li>嘔吐や下痢が数日たっても軽くならない、いったん良くなったのにぶり返した</li>
+        <li>同じ食事をした方が同時に体調を崩している</li>
+        <li>お仕事や学校の関係で、いつから復帰してよいかの判断に迷う</li>
+      </ul>
+    </div>
 
     <h2 id="sec-5">当院での対応</h2>
     <p>いなだ医院は内科・感染症内科・消化器内科（胃腸科）・小児科を標榜しており、大人の方もお子さんも同じ窓口でご相談いただけます。経過や食事の内容、周囲の流行状況をうかがったうえで、必要に応じて血液検査や超音波検査などで脱水の程度や他の病気の可能性を確認し、内視鏡検査を含めた追加の検査が必要かどうかも含めて診療方針をご相談します。症状が強く水分が摂れない場合には点滴での補液を行うこともあります。嘔吐や下痢のある方は、来院前にお電話（086-525-0600）で一度ご連絡いただけますと、待合での動線や診察の順番を調整しやすくなります。朝は7時から診療しておりますので、お仕事前の受診もご検討ください。</p>
@@ -161,6 +169,15 @@
       <li>普段服用しているお薬やお薬手帳</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/syokuchu/kanren/yobou/040204-1.html" target="_blank" rel="noopener">ノロウイルスに関するQ&amp;A（厚生労働省）</a></li>
+        <li><a href="https://idsc.tmiph.metro.tokyo.lg.jp/diseases/gastro/" target="_blank" rel="noopener">感染性胃腸炎（ウイルス性胃腸炎を中心に）（東京都感染症情報センター／東京都健康安全研究センター）</a></li>
+        <li><a href="https://id-info.jihs.go.jp/" target="_blank" rel="noopener">感染症情報提供サイト（国立健康危機管理研究機構）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -171,7 +188,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。

@@ -13,6 +13,9 @@
 <meta property="og:image" content="https://inadain.github.io/inada-clinic-qa/assets/logo.png">
 <meta property="og:locale" content="ja_JP">
 <link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
 <script type="application/ld+json">
 {
@@ -58,7 +61,7 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ"></a>
+    <a href="../index.html" class="site-header__logo"><img src="../assets/logo.png" alt="いなだ医院 ロゴ" width="120" height="63"></a>
     <div class="site-header__text">
       <span class="site-header__title">いなだ医院 健康相談室</span>
       <span class="site-header__sub">倉敷市玉島柏島 ｜ 内科・呼吸器内科・循環器内科ほか</span>
@@ -114,21 +117,28 @@
 
     <h2 id="sec-2">受診の目安</h2>
     <p>血便は「量が少ないから軽い」とは限りません。以下を目安にご検討ください。</p>
-    <p><strong>すぐに受診を検討したほうがよいとされるサイン</strong></p>
-    <ul>
-      <li>大量の出血がある、便器が赤く染まるほどの出血が続く</li>
-      <li>黒くドロっとした便（タール便）が出た</li>
-      <li>血便に加えて、めまい・立ちくらみ・動悸・冷や汗・強い倦怠感がある</li>
-      <li>強い腹痛や発熱を伴う</li>
-    </ul>
-    <p><strong>早めの受診をおすすめするケース</strong></p>
-    <ul>
-      <li>健診・人間ドックの便潜血検査で陽性を指摘された（1回だけの陽性でも精密検査がすすめられています）</li>
-      <li>痔と言われたことがあるが、出血が繰り返す・以前と様子が違う</li>
-      <li>便が細くなった、便秘と下痢を繰り返すなど便通の変化がある</li>
-      <li>体重が減ってきた、貧血を指摘された</li>
-      <li>40歳以上で大腸の検査を受けたことがない、ご家族に大腸の病気の方がいる</li>
-    </ul>
+    <div class="urgency urgency--alert">
+      <h3>すぐに受診を検討してください</h3>
+      <ul>
+        <li><strong>大量の出血がある</strong>、便器が赤く染まるほどの出血がくり返し続く</li>
+        <li>出血に加えて<strong>ふらつき・立ちくらみ・めまい</strong>がある、動悸・冷や汗・強い倦怠感・顔面蒼白を伴う</li>
+        <li><strong>黒くドロっとした便（タール便）</strong>が出た、または吐血した</li>
+        <li>強い腹痛や高熱を伴う</li>
+        <li>血をサラサラにする薬を飲んでいて、出血が止まらない</li>
+      </ul>
+      <p style="font-size:13.5px; margin:10px 0 0;">出血量が多いときや、ふらつき・冷や汗を伴うときは、体内で急な出血が起きている可能性があります。立ち上がれない、意識がもうろうとするといった場合は迷わず救急要請（119番）を、診療時間外であれば救急外来の受診もご検討ください。</p>
+    </div>
+    <div class="urgency urgency--warn">
+      <h3>早めの受診をおすすめします</h3>
+      <ul>
+        <li>健診・人間ドックの便潜血検査で陽性を指摘された（2日法のうち1回だけの陽性でも精密検査がすすめられています）</li>
+        <li>痔と言われたことがあるが、出血が繰り返す・以前と様子が違う</li>
+        <li>便が細くなった、便秘と下痢を繰り返すなど便通の変化がある</li>
+        <li>体重が減ってきた、貧血を指摘された</li>
+        <li>40歳以上で大腸の検査を受けたことがない、ご家族に大腸の病気の方がいる</li>
+        <li>少量でも血が付く状態が数週間以上続いている</li>
+      </ul>
+    </div>
 
     <h2 id="sec-3">「痔だと思って様子を見る」ことのリスク</h2>
     <p>痔をお持ちの方でも、その出血がすべて痔によるものとは限りません。痔と大腸ポリープ・大腸がんは同じ方に併せて見つかることがあり、「以前から痔があるから」と考えて精密検査を見送った結果、後になって大腸の病気が見つかるケースもあると報告されています。過度に心配していただく必要はありませんが、原因をはっきりさせておくことが安心につながります。とくに便潜血検査は、目に見えないわずかな出血を拾い上げるための検査です。陽性となった方の多くは大腸がん以外が原因とされていますが、それは検査を受けて初めてわかることです。</p>
@@ -145,6 +155,17 @@
       <li>これまでに受けた大腸の検査、服用中のお薬（血をサラサラにする薬の有無を含む）</li>
     </ul>
 
+    <div class="sources">
+      <h3>参考にした情報</h3>
+      <ul>
+        <li><a href="https://ganjoho.jp/public/pre_scr/screening/colon.html" target="_blank" rel="noopener">大腸がん検診について（国立がん研究センター がん情報サービス）</a></li>
+        <li><a href="https://ganjoho.jp/public/cancer/colon/about.html" target="_blank" rel="noopener">大腸がんについて（国立がん研究センター がん情報サービス）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/cp_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「大腸ポリープ」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.jsge.or.jp/committees/guideline/disease/pdf/ibd_2023.pdf" target="_blank" rel="noopener">患者さんとご家族のためのガイド「炎症性腸疾患（IBD）」2023（日本消化器病学会）</a></li>
+        <li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000059490.html" target="_blank" rel="noopener">がん検診（厚生労働省）</a></li>
+      </ul>
+    </div>
+
     <div class="notice-box">
       本ページは一般的な情報提供を目的としています。症状の程度や経過には個人差があり、緊急性が高いと感じる場合は救急外来の受診もご検討ください。ご不明な点はお電話（086-525-0600）にてお問い合わせください。
     </div>
@@ -155,7 +176,7 @@
     </div>
 
     <div class="author-box">
-      <img src="../assets/director.jpg" alt="いなだ医院の医師">
+      <img src="../assets/director.jpg" alt="いなだ医院の医師" loading="lazy" width="58" height="58">
       <div class="author-box__text">
         <strong>医療法人 いなだ医院</strong>
         倉敷市玉島柏島で、内科・呼吸器内科・循環器内科・感染症内科・アレルギー科・消化器内科（胃腸科）・小児科・リハビリテーション科を診療しています。本記事は当院の医師が内容を確認しています。
