@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://inadain.github.io/inada-clinic-qa/</loc><priority>1.0</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/af-stroke.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/anemia.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/blood-in-stool.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/breathlessness.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chest-pain.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/chest-xray-shadow.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-cough.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-fever.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/child-vaccine-schedule.html</loc><priority>0.8</priority></url>
@@ -24,6 +26,7 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/flu-or-covid.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/flu-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/food-allergy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gallstone.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroenteritis.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gastroscopy-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/gout-uric-acid.html</loc><priority>0.8</priority></url>
@@ -37,8 +40,11 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/home-visit.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/ibs-bowel.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/insomnia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/kidney-function.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/knee-pain.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/leg-swelling.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/liver-function.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/long-covid.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/palpitations.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/pneumococcal-vaccine.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/pollen-allergy.html</loc><priority>0.8</priority></url>
@@ -49,7 +55,9 @@
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/sore-throat-strep.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/sputum-blood.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/stomach-pain.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/thyroid.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/waiting-payment.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/weight-loss.html</loc><priority>0.8</priority></url>
   <url><loc>https://inadain.github.io/inada-clinic-qa/articles/wheezing-asthma.html</loc><priority>0.8</priority></url>
+  <url><loc>https://inadain.github.io/inada-clinic-qa/articles/year-round-rhinitis.html</loc><priority>0.8</priority></url>
 </urlset>
