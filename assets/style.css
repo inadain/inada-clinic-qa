@@ -897,9 +897,11 @@ html.force-desktop .view-toggle { display: block !important; }
 .mobile-cta__map { background: #fff; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 .mobile-cta__hp  { background: #fff; color: var(--text-sub); border: 1.5px solid var(--border); }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .mobile-cta { display: flex; }
   body { padding-bottom: 76px; }
+}
+@media (max-width: 700px) {
   .site-header__cta { display: none; }
 }
 
@@ -933,7 +935,7 @@ html.force-desktop .view-toggle { display: block !important; }
 .float-cta__map { background: #fff; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 .float-cta__map:hover { background: var(--primary-light); }
 
-@media (max-width: 700px) { .float-cta { display: none; } }
+@media (max-width: 900px) { .float-cta { display: none; } }
 html.force-desktop .float-cta { display: flex !important; }
 html.force-desktop .mobile-cta { display: none !important; }
 
