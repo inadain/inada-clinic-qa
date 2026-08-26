@@ -991,3 +991,14 @@ html.force-desktop .mobile-cta { display: none !important; }
   margin: 0 0 16px;
 }
 .std-note strong { color: var(--primary-dark); }
+
+/* ---------- 監修表示（画像なしの版） ---------- */
+.author-box {
+  display: block;
+  border-left: 4px solid var(--primary);
+  padding: 15px 18px;
+}
+.author-box__text strong { margin-bottom: 4px; }
+
+/* 医師紹介ブロックは使用しなくなったため無効化 */
+.doctors { display: none; }
