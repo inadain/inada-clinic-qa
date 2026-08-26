@@ -94,6 +94,12 @@
     });
   }
 
+  // 404ページなど、他ページから ?q= で渡された語で検索する
+  try {
+    var qp = new URLSearchParams(location.search).get('q');
+    if (qp) { box.value = qp; run(); }
+  } catch (e) {}
+
   var timer;
   box.addEventListener('input', function () {
     clearTimeout(timer);

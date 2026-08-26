@@ -1301,3 +1301,13 @@ html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
 }
 .today__urgent a { color: var(--primary-dark); font-weight: 700; }
 @media (max-width: 600px) { .today__urgent { font-size: 12.2px; } }
+
+/* ===== 404ページ ===== */
+.nf-search { display: flex; gap: 10px; margin: 0 0 24px; flex-wrap: wrap; }
+.nf-search .search-box { flex: 1 1 240px; margin: 0; }
+.nf-cats { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 22px; }
+.nf-cats a {
+  padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px;
+  background: #fff; color: var(--text); font-size: 13.5px; text-decoration: none;
+}
+.nf-cats a:hover { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-light); }

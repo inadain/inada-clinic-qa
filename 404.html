@@ -45,16 +45,44 @@
       </svg>
     </div>
 
-    <h2>お探しのものはこちらにあるかもしれません</h2>
+    <h2>症状やことばで探す</h2>
+    <p>気になる症状を入力すると、健康相談室のトップで検索できます。</p>
+    <form action="/" method="get" class="nf-search">
+      <input type="search" name="q" class="search-box" placeholder="例：咳、動悸、介護認定、デイサービス" aria-label="症状やことばで検索">
+      <button type="submit" class="btn btn-primary">検索する</button>
+    </form>
+
+    <h2>カテゴリから探す</h2>
+    <div class="nf-cats">
+      <a href="/category/cat-resp.html">呼吸器内科</a>
+      <a href="/category/cat-cardio.html">循環器内科</a>
+      <a href="/category/cat-gastro.html">消化器内科（胃腸科）</a>
+      <a href="/category/cat-general.html">内科・生活習慣病</a>
+      <a href="/category/cat-infect.html">発熱・感染症内科</a>
+      <a href="/category/cat-allergy.html">アレルギー科</a>
+      <a href="/category/cat-rehab.html">リハビリテーション科</a>
+      <a href="/category/cat-child.html">小児科・予防接種</a>
+      <a href="/category/cat-care.html">在宅医療・介護</a>
+      <a href="/category/cat-facility.html">施設のご案内</a>
+      <a href="/category/cat-visit.html">受診案内</a>
+    </div>
+
+    <h2>よく見られているページ</h2>
     <ul>
-      <li><a href="/">気になる症状から探す（記事一覧・検索）</a></li>
-      <li><a href="/#cat-visit">初めて受診される方へ</a></li>
+      <li><a href="/articles/first-visit.html">初めて受診したいのですが、何が必要ですか？</a></li>
+      <li><a href="/articles/waiting-payment.html">待ち時間はどのくらいですか？空いている時間は？</a></li>
+      <li><a href="/articles/chronic-cough.html">咳が長引くのですが、何科を受診すればいいですか？</a></li>
+      <li><a href="/articles/chiiki-houkatsu.html">親の介護のこと、まずどこに相談すればよいですか？</a></li>
       <li><a href="https://www.inada-iin.com/">いなだ医院 公式ホームページ</a>（診療時間・アクセス・院長紹介）</li>
     </ul>
 
     <div class="cta-box">
       <p>お探しの内容がわからないときは、お電話でもご案内いたします</p>
-      <a href="tel:0865250600" class="btn btn-primary tel">📞 086-525-0600</a>
+      <div data-today class="today"></div>
+      <div class="cta-box__btns">
+        <a href="tel:0865250600" class="btn btn-primary tel">📞 086-525-0600</a>
+        <a href="https://maps.google.com/?cid=9342176495861149396" class="btn btn-outline" target="_blank" rel="noopener">📍 地図で見る</a>
+      </div>
     </div>
   </article>
 </main>
