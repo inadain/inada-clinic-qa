@@ -32,14 +32,22 @@
     var q = normalize(box.value);
     var terms = q.split(/[\s　]+/).filter(Boolean);
 
+    var careEntry = document.querySelector('.care-entry');
+    var wasEmpty = !document.body.hasAttribute('data-searching');
+
     if (!terms.length) {
       cards.forEach(function (c) { c.style.display = ''; });
       sections.forEach(function (s) { s.style.display = ''; });
       if (nav) nav.style.display = '';
+      if (careEntry) careEntry.style.display = '';
       if (noResult) noResult.style.display = 'none';
       if (status) status.textContent = '';
+      document.body.removeAttribute('data-searching');
       return;
     }
+    // 症状を探している人には介護の案内は不要なので、検索中は隠す
+    if (careEntry) careEntry.style.display = 'none';
+    document.body.setAttribute('data-searching', '1');
 
     var hit = 0;
     cards.forEach(function (c) {
@@ -59,6 +67,20 @@
 
     if (nav) nav.style.display = 'none';
     if (noResult) noResult.style.display = hit ? 'none' : '';
+
+    // 検索を始めた最初の1回だけ、結果の先頭が画面外なら送る
+    if (wasEmpty && hit) {
+      var first = null;
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].style.display !== 'none') { first = sections[i]; break; }
+      }
+      if (first) {
+        var top = first.getBoundingClientRect().top;
+        if (top > window.innerHeight * 0.55) {
+          window.scrollTo({ top: window.scrollY + top - 90, behavior: 'smooth' });
+        }
+      }
+    }
     if (status) {
       status.innerHTML = hit
         ? '「' + escapeHtml(box.value.trim()) + '」の検索結果：<strong>' + hit + '件</strong>'
@@ -88,8 +110,8 @@
     el.addEventListener('click', function (e) {
       e.preventDefault();
       box.value = el.getAttribute('data-q');
+      document.body.removeAttribute('data-searching');   // 送りの判定をやり直す
       run();
-      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
 })();
