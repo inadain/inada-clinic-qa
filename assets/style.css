@@ -1002,3 +1002,72 @@ html.force-desktop .mobile-cta { display: none !important; }
 
 /* 医師紹介ブロックは使用しなくなったため無効化 */
 .doctors { display: none; }
+
+
+/* ===== 介護・施設をお探しの方の入口（トップページ） ===== */
+.care-entry {
+  background: var(--accent-light);
+  border: 1px solid #f0dcb8;
+  border-radius: var(--radius-lg);
+  padding: 22px 24px 24px;
+  margin: 26px 0 8px;
+}
+.care-entry__badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.care-entry__head p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text-sub);
+  margin: 0 0 16px;
+}
+.care-entry__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.care-entry__links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.care-entry__links a:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.care-entry__links strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+.care-entry__links strong::after {
+  content: " →";
+  color: var(--accent);
+}
+.care-entry__links span {
+  display: block;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-sub);
+}
+@media (max-width: 700px) {
+  .care-entry { padding: 18px 16px 20px; border-radius: var(--radius); }
+  .care-entry__links { grid-template-columns: 1fr; gap: 10px; }
+  .care-entry__head p { font-size: 13.5px; }
+}
