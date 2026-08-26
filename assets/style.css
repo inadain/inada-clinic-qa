@@ -54,7 +54,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 12px;
 }
-.site-header__logo img { height: 42px; width: auto; }
+.site-header__logo img { height: 52px; width: auto; object-fit: contain; }
 .site-header__text { display: flex; flex-direction: column; line-height: 1.35; }
 .site-header__title {
   font-family: var(--font-display);
@@ -79,6 +79,8 @@ img { max-width: 100%; display: block; }
 }
 .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 2px 8px rgba(47,122,107,.28); }
 .btn-primary:hover { background: var(--primary-dark); text-decoration: none; transform: translateY(-1px); }
+.btn-facility { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(232,163,61,.30); }
+.btn-facility:hover { background: #d18f2c; color: #fff; text-decoration: none; transform: translateY(-1px); }
 .btn-outline { background: #fff; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 .btn-outline:hover { background: var(--primary-light); text-decoration: none; }
 
@@ -391,7 +393,9 @@ article.qa p > strong:only-child {
   .hero-visual h1 { font-size: 23px; }
   .hero-visual__inner { padding: 30px 18px 26px; }
   .site-header__sub { display: none; }
-  .site-header__cta .btn { padding: 8px 13px; font-size: 12px; }
+  .site-header__cta .btn { padding: 8px 12px; font-size: 12px; }
+  .site-header__cta .hdr-tel { display: none; }
+  .site-header__logo img { height: 44px; }
   article.qa { padding: 24px 19px; border-radius: var(--radius); }
   article.qa .qa-question { font-size: 19px; }
   article.qa h2 { font-size: 16.5px; }
@@ -902,7 +906,10 @@ html.force-desktop .view-toggle { display: block !important; }
   body { padding-bottom: 76px; }
 }
 @media (max-width: 700px) {
-  .site-header__cta { display: none; }
+  /* 電話とマップは画面下の固定バーにあるため、ヘッダーは公式HPへの導線だけ残す */
+  .site-header__cta { display: flex; gap: 6px; }
+  .site-header__cta .hdr-tel { display: none; }
+  .site-header__cta .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; }
 }
 
 /* --- PC：右下に浮かせる --- */
@@ -932,6 +939,11 @@ html.force-desktop .view-toggle { display: block !important; }
 .float-cta svg { width: 17px; height: 17px; flex-shrink: 0; }
 .float-cta__tel { background: var(--primary); color: #fff; }
 .float-cta__tel:hover { background: var(--primary-dark); }
+.float-cta__name {
+  display: block; font-family: var(--font-display); font-size: 11.5px; font-weight: 700;
+  color: var(--text-sub); text-align: center; line-height: 1.4; margin-bottom: 2px;
+  max-width: 210px; word-break: keep-all; overflow-wrap: anywhere;
+}
 .float-cta__map { background: #fff; color: var(--primary-dark); border: 1.5px solid var(--primary); }
 .float-cta__map:hover { background: var(--primary-light); }
 
