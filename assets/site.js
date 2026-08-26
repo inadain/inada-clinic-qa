@@ -274,3 +274,56 @@
   }
   paint();
 })();
+
+
+/* ---------------------------------------------------------------
+   本日の診療状況
+   診療時間  月〜土 7:00〜12:00 ／ 月〜金 14:30〜18:30 ／ 土 14:30〜17:30
+   休診     日曜・祝日・お盆(8/14〜15)・年末年始(12/29〜1/3)
+   祝日は内閣府「国民の祝日について」のCSV（2026〜2027年）による
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var HOL = ["2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-07-20", "2026-08-11", "2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23", "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-21", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05", "2027-07-19", "2027-08-11", "2027-09-20", "2027-09-23", "2027-10-11", "2027-11-03", "2027-11-23"];
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function hm(m) { return Math.floor(m / 60) + ':' + pad(m % 60); }
+
+  function status(now) {
+    var iso = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate());
+    var mo = now.getMonth() + 1, da = now.getDate(), w = now.getDay();
+    var mins = now.getHours() * 60 + now.getMinutes();
+
+    if (w === 0) return { open: false, why: '日曜のため本日は休診です' };
+    if (HOL.indexOf(iso) !== -1) return { open: false, why: '祝日のため本日は休診です' };
+    if (mo === 8 && (da === 14 || da === 15)) return { open: false, why: 'お盆のため本日は休診です' };
+    if ((mo === 12 && da >= 29) || (mo === 1 && da <= 3)) return { open: false, why: '年末年始のため本日は休診です' };
+
+    var AM_S = 7 * 60, AM_E = 12 * 60, PM_S = 14 * 60 + 30;
+    var PM_E = (w === 6) ? 17 * 60 + 30 : 18 * 60 + 30;
+
+    if (mins < AM_S) return { open: false, why: '本日は ' + hm(AM_S) + ' から受付します' };
+    if (mins < AM_E) return { open: true, why: '午前の診療中です（' + hm(AM_E) + ' まで）' };
+    if (mins < PM_S) return { open: false, why: '昼休みです。午後は ' + hm(PM_S) + ' から' };
+    if (mins < PM_E) return { open: true, why: '午後の診療中です（' + hm(PM_E) + ' まで）' };
+    return { open: false, why: '本日の受付は終了しました' };
+  }
+
+  function mount() {
+    var hosts = document.querySelectorAll('[data-today]');
+    if (!hosts.length) return;
+    var st = status(new Date());
+    Array.prototype.forEach.call(hosts, function (host) {
+      host.className = 'today ' + (st.open ? 'today--open' : 'today--closed');
+      host.innerHTML =
+        '<span class="today__dot" aria-hidden="true"></span>' +
+        '<span class="today__label">' + (st.open ? '診療中' : '時間外') + '</span>' +
+        '<span class="today__why">' + st.why + '</span>';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  } else { mount(); }
+  setInterval(mount, 60000);
+})();

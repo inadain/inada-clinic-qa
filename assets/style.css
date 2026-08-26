@@ -1230,3 +1230,28 @@ html.force-desktop .mobile-cta { display: none !important; }
   .slider__slide figcaption { font-size: 12.5px; padding: 22px 14px 12px; }
 }
 @media print { .slider__nav, .slider__dots { display: none; } }
+
+
+/* ===== 本日の診療状況 ===== */
+.today {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px;
+  margin: 0 0 14px; padding: 10px 14px;
+  border-radius: 999px; font-size: 13.5px; line-height: 1.5;
+  background: #fff; border: 1px solid var(--border);
+}
+.today__dot { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+.today__label { font-family: var(--font-display); font-weight: 700; }
+.today__why { color: var(--text-sub); font-size: 12.8px; }
+.today--open { border-color: #bfe0d6; background: var(--primary-light); }
+.today--open .today__dot { background: #2f9e6b; box-shadow: 0 0 0 3px rgba(47,158,107,.18); }
+.today--open .today__label { color: var(--primary-dark); }
+.today--closed { border-color: #e6e0d6; background: #faf8f4; }
+.today--closed .today__dot { background: #b6ada0; }
+.today--closed .today__label { color: var(--text-sub); }
+.cta-box__btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+@media (max-width: 600px) {
+  .today { border-radius: var(--radius); padding: 10px 13px; font-size: 13px; }
+  .today__why { width: 100%; }
+  .cta-box__btns .btn { flex: 1 1 auto; justify-content: center; }
+}
+@media print { .today { display: none; } }
