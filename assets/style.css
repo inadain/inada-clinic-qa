@@ -965,3 +965,16 @@ html.force-desktop .mobile-cta { display: none !important; }
   }
   .site-header__inner { align-items: center; }
 }
+
+/* ---------- 年度依存の情報であることの明示 ---------- */
+.fy-note {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: #6b5a2e;
+  margin: 0 0 14px;
+}
+.fy-note strong { color: #8a6519; }
