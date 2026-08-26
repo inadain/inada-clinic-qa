@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inadain.github.io/inada-clinic-qa/sitemap.xml
+Sitemap: https://kenko.inadaiin.com/sitemap.xml
