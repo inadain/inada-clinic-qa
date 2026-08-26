@@ -978,3 +978,16 @@ html.force-desktop .mobile-cta { display: none !important; }
   margin: 0 0 14px;
 }
 .fy-note strong { color: #8a6519; }
+
+/* ---------- 参照した公的な相談窓口の注記 ---------- */
+.std-note {
+  background: #f3f7f6;
+  border: 1px solid #d8e6e1;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 13.4px;
+  line-height: 1.8;
+  color: #4a5f59;
+  margin: 0 0 16px;
+}
+.std-note strong { color: var(--primary-dark); }
