@@ -191,9 +191,7 @@
     .filter(function (h) { return h && h.tagName === 'H2'; });
   if (!heads.length) return;
 
-  var ticking = false;
   function update() {
-    ticking = false;
     var line = 120;            // 画面上部から少し下を「読んでいる位置」とみなす
     var cur = heads[0].id;
     for (var i = 0; i < heads.length; i++) {
@@ -205,12 +203,7 @@
       }
     }
   }
-  function onScroll() {
-    if (ticking) return;
-    ticking = true;
-    (window.requestAnimationFrame || setTimeout)(update, 16);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
   update();
 })();
