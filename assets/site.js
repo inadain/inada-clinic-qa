@@ -207,3 +207,48 @@
   window.addEventListener('resize', update, { passive: true });
   update();
 })();
+
+
+/* カテゴリページ先頭の写真スライダー */
+(function () {
+  var root = document.querySelector('[data-slider]');
+  if (!root) return;
+  var track = root.querySelector('.slider__track');
+  var slides = root.querySelectorAll('.slider__slide');
+  var dots = root.querySelectorAll('.slider__dots button');
+  var prev = root.querySelector('.slider__nav--prev');
+  var next = root.querySelector('.slider__nav--next');
+  if (!track || slides.length < 2) return;
+
+  var idx = 0;
+  function paint() {
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].setAttribute('aria-current', i === idx ? 'true' : 'false');
+    }
+  }
+  function go(i) {
+    idx = (i + slides.length) % slides.length;
+    track.scrollTo({ left: slides[idx].offsetLeft - slides[0].offsetLeft, behavior: 'smooth' });
+    paint();
+  }
+  if (prev) prev.addEventListener('click', function () { go(idx - 1); stop(); });
+  if (next) next.addEventListener('click', function () { go(idx + 1); stop(); });
+  for (var i = 0; i < dots.length; i++) {
+    (function (n) { dots[n].addEventListener('click', function () { go(n); stop(); }); })(i);
+  }
+  track.addEventListener('scroll', function () {
+    var w = slides[0].getBoundingClientRect().width || 1;
+    var n = Math.round(track.scrollLeft / w);
+    if (n !== idx && n >= 0 && n < slides.length) { idx = n; paint(); }
+  }, { passive: true });
+
+  var timer = null;
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) {
+    timer = setInterval(function () { go(idx + 1); }, 6000);
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('focusin', stop);
+  }
+  paint();
+})();
