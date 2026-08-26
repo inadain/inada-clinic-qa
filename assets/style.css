@@ -1255,3 +1255,42 @@ html.force-desktop .mobile-cta { display: none !important; }
   .cta-box__btns .btn { flex: 1 1 auto; justify-content: center; }
 }
 @media print { .today { display: none; } }
+
+
+/* ===== 文字サイズの切り替え ===== */
+.fontsize {
+  display: flex; align-items: center; gap: 6px;
+  margin: 10px 0 -4px; justify-content: flex-end;
+  font-size: 12.5px; color: var(--text-sub);
+}
+.fontsize__label { margin-right: 2px; }
+.fontsize button {
+  min-width: 34px; padding: 5px 9px;
+  border: 1px solid var(--border); background: #fff; color: var(--text-sub);
+  border-radius: 8px; cursor: pointer; font-family: var(--font-body);
+  line-height: 1.2; transition: background .15s, border-color .15s, color .15s;
+}
+.fontsize button:hover { border-color: var(--primary); color: var(--primary-dark); }
+.fontsize button[aria-pressed="true"] {
+  background: var(--primary); border-color: var(--primary); color: #fff; font-weight: 700;
+}
+.fontsize button:nth-child(2) { font-size: 12px; }
+.fontsize button:nth-child(3) { font-size: 14px; }
+.fontsize button:nth-child(4) { font-size: 16px; }
+
+html[data-fs="s"] article.qa p,
+html[data-fs="s"] article.qa li { font-size: 14px; }
+html[data-fs="s"] .urgency li, html[data-fs="s"] .checklist li,
+html[data-fs="s"] .cmp-table { font-size: 13.2px; }
+
+html[data-fs="l"] article.qa p,
+html[data-fs="l"] article.qa li { font-size: 17.8px; line-height: 2.05; }
+html[data-fs="l"] article.qa h2 { font-size: 19.5px; }
+html[data-fs="l"] article.qa .qa-question { font-size: 24px; }
+html[data-fs="l"] .urgency li, html[data-fs="l"] .checklist li { font-size: 16.6px; }
+html[data-fs="l"] .cmp-table { font-size: 15.4px; }
+html[data-fs="l"] .toc li { font-size: 15.4px; }
+html[data-fs="l"] .faq-card__q { font-size: 17px; }
+html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
+
+@media print { .fontsize { display: none; } }

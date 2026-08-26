@@ -327,3 +327,46 @@
   } else { mount(); }
   setInterval(mount, 60000);
 })();
+
+
+/* ---------------------------------------------------------------
+   文字サイズの切り替え（小・中・大）。選択は次回以降も保持する
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var KEY = 'inada-font-size';
+  var root = document.documentElement;
+
+  function apply(v) {
+    if (v === 'm') { root.removeAttribute('data-fs'); }
+    else { root.setAttribute('data-fs', v); }
+    var box = document.querySelector('.fontsize');
+    if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-fs') === v ? 'true' : 'false');
+    });
+  }
+
+  var saved = 'm';
+  try { saved = localStorage.getItem(KEY) || 'm'; } catch (e) {}
+
+  function mount() {
+    var box = document.querySelector('.fontsize');
+    if (box) {
+      Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
+        b.addEventListener('click', function () {
+          var v = b.getAttribute('data-fs');
+          try { localStorage.setItem(KEY, v); } catch (e) {}
+          apply(v);
+        });
+      });
+    }
+    apply(saved);
+  }
+
+  // ちらつきを防ぐため、保存値は先に当てておく
+  if (saved !== 'm') { root.setAttribute('data-fs', saved); }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  } else { mount(); }
+})();
