@@ -940,3 +940,28 @@ html.force-desktop .float-cta { display: flex !important; }
 html.force-desktop .mobile-cta { display: none !important; }
 
 @media print { .float-cta { display: none !important; } }
+
+/* ---------- ヘッダー：標榜8科目を折り返して表示 ---------- */
+.site-header__inner { align-items: flex-start; }
+.site-header__logo img { margin-top: 2px; }
+.site-header__text { flex: 1 1 auto; min-width: 0; }
+.site-header__sub {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-sub);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.site-header__cta { align-self: center; }
+
+@media (max-width: 900px) {
+  /* スマホ・タブレットでは診療科目を1行に省略（フッターに全科目を記載済み） */
+  .site-header__sub {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 10.5px;
+  }
+  .site-header__inner { align-items: center; }
+}
