@@ -1294,3 +1294,10 @@ html[data-fs="l"] .faq-card__q { font-size: 17px; }
 html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
 
 @media print { .fontsize { display: none; } }
+
+.today__urgent {
+  width: 100%; font-size: 12.6px; line-height: 1.7; color: var(--text-sub);
+  padding-top: 7px; margin-top: 2px; border-top: 1px dashed var(--border);
+}
+.today__urgent a { color: var(--primary-dark); font-weight: 700; }
+@media (max-width: 600px) { .today__urgent { font-size: 12.2px; } }

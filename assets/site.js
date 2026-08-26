@@ -315,10 +315,20 @@
     var st = status(new Date());
     Array.prototype.forEach.call(hosts, function (host) {
       host.className = 'today ' + (st.open ? 'today--open' : 'today--closed');
-      host.innerHTML =
+      var html =
         '<span class="today__dot" aria-hidden="true"></span>' +
         '<span class="today__label">' + (st.open ? '診療中' : '時間外') + '</span>' +
         '<span class="today__why">' + st.why + '</span>';
+      // 時間外に読んでいる方には、判断に迷ったときの相談先も出す
+      if (!st.open) {
+        html += '<span class="today__urgent">急いで判断したいときは ' +
+          '<a href="tel:0862227119">♯7119 岡山県救急安心センター</a>（24時間）';
+        if (host.hasAttribute('data-child')) {
+          html += '／お子さまは <a href="tel:0868010018">♯8000</a>（平日19時〜翌朝8時ほか）';
+        }
+        html += '</span>';
+      }
+      host.innerHTML = html;
     });
   }
 
