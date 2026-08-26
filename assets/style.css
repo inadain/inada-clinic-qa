@@ -1071,3 +1071,29 @@ html.force-desktop .mobile-cta { display: none !important; }
   .care-entry__links { grid-template-columns: 1fr; gap: 10px; }
   .care-entry__head p { font-size: 13.5px; }
 }
+
+
+/* ===== 施設写真 ===== */
+.photo { margin: 22px 0; }
+.photo img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.photo figcaption {
+  font-size: 12.5px; line-height: 1.75; color: var(--text-sub);
+  margin-top: 9px; padding-left: 2px;
+}
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 22px 0; }
+.photo-grid figure { margin: 0; }
+.photo-grid img {
+  width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block;
+  border-radius: 12px; box-shadow: var(--shadow);
+}
+.photo-grid figcaption {
+  font-size: 12px; line-height: 1.7; color: var(--text-sub); margin-top: 7px;
+}
+@media (max-width: 700px) {
+  .photo-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .photo-grid figcaption { font-size: 11.5px; }
+  .photo figcaption { font-size: 12px; }
+}
