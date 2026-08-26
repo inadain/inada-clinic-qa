@@ -175,3 +175,42 @@
   d.appendChild(list);
   toc.parentNode.replaceChild(d, toc);
 })();
+
+
+/* 目次：いま読んでいる見出しを示す（サイドバー表示のときだけ効く） */
+(function () {
+  var toc = document.querySelector('article.qa > .toc');
+  if (!toc) return;
+  var links = {}, order = [];
+  Array.prototype.forEach.call(toc.querySelectorAll('a[href^="#"]'), function (a) {
+    var id = a.getAttribute('href').slice(1);
+    links[id] = a; order.push(id);
+  });
+  var heads = order
+    .map(function (id) { return document.getElementById(id); })
+    .filter(function (h) { return h && h.tagName === 'H2'; });
+  if (!heads.length) return;
+
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var line = 120;            // 画面上部から少し下を「読んでいる位置」とみなす
+    var cur = heads[0].id;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i].getBoundingClientRect().top <= line) cur = heads[i].id;
+    }
+    for (var k in links) {
+      if (Object.prototype.hasOwnProperty.call(links, k)) {
+        links[k].classList.toggle('is-current', k === cur);
+      }
+    }
+  }
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    (window.requestAnimationFrame || setTimeout)(update, 16);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
