@@ -1311,3 +1311,6 @@ html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
   background: #fff; color: var(--text); font-size: 13.5px; text-decoration: none;
 }
 .nf-cats a:hover { border-color: var(--primary); color: var(--primary-dark); background: var(--primary-light); }
+
+.site-footer .footer-branch { color: var(--text); }
+.site-footer .footer-branch a { font-weight: 700; }
