@@ -1314,3 +1314,8 @@ html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
 
 .site-footer .footer-branch { color: var(--text); }
 .site-footer .footer-branch a { font-weight: 700; }
+
+/* ===== カテゴリページの施設ロゴ ===== */
+.cat-logo { margin: 14px 0 2px; }
+.cat-logo img { width: 100%; max-width: 300px; height: auto; display: block; }
+@media (max-width: 600px) { .cat-logo img { max-width: 230px; } }
