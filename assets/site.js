@@ -468,3 +468,43 @@
   }
   render();
 })();
+
+/* ---------------------------------------------------------------
+   一覧の表示切り替え（カード／一覧）。選択は次回以降も保持する
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var KEY = 'inada-list-view';
+  var root = document.documentElement;
+
+  function apply(v) {
+    if (v === 'card') { root.removeAttribute('data-view'); }
+    else { root.setAttribute('data-view', 'list'); }
+    var box = document.querySelector('.viewsw');
+    if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-view') === v ? 'true' : 'false');
+    });
+  }
+
+  var saved = 'list';
+  try { saved = localStorage.getItem(KEY) || 'list'; } catch (e) {}
+  if (saved === 'list') { root.setAttribute('data-view', 'list'); }
+
+  function mount() {
+    var box = document.querySelector('.viewsw');
+    if (box) {
+      Array.prototype.forEach.call(box.querySelectorAll('button'), function (b) {
+        b.addEventListener('click', function () {
+          var v = b.getAttribute('data-view');
+          try { localStorage.setItem(KEY, v); } catch (e) {}
+          apply(v);
+        });
+      });
+    }
+    apply(saved);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount);
+  } else { mount(); }
+})();

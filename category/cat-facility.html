@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/style.css?v=5bb543e3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,11 +61,18 @@
 
 <main>
   <p class="breadcrumb"><a href="../index.html">健康相談室トップ</a> ＞ 施設のご案内</p>
-  <div class="fontsize">
-    <span class="fontsize__label">文字サイズ</span>
-    <button type="button" data-fs="s" aria-pressed="false">小</button>
-    <button type="button" data-fs="m" aria-pressed="true">中</button>
-    <button type="button" data-fs="l" aria-pressed="false">大</button>
+  <div class="toolbar">
+    <div class="viewsw">
+      <span class="viewsw__label">表示</span>
+      <button type="button" data-view="list" aria-pressed="true">一覧</button>
+      <button type="button" data-view="card" aria-pressed="false">カード</button>
+    </div>
+    <div class="fontsize">
+      <span class="fontsize__label">文字サイズ</span>
+      <button type="button" data-fs="s" aria-pressed="false">小</button>
+      <button type="button" data-fs="m" aria-pressed="true">中</button>
+      <button type="button" data-fs="l" aria-pressed="false">大</button>
+    </div>
   </div>
   <p class="cat-logo"><img src="../assets/village-logo.png" alt="複合介護施設 メディケアビレッジかしわじま" width="760" height="270"></p>
   <div class="slider" data-slider>
@@ -178,21 +185,22 @@
   </section>
 
   <section class="clinic-info">
-    <h2>診療時間・アクセス</h2>
+    <h2>お問い合わせ・見学のご案内</h2>
+    <p>メディケアビレッジかしわじま（サービス付き高齢者向け住宅）、こはる日和（小規模多機能型居宅介護・デイサービス・居宅介護支援）についてのご相談です。ご家族さま・ケアマネジャーさま、どちらからでもお気軽にご連絡ください。</p>
     <table class="hours-table">
       <thead>
-        <tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日祝</th></tr>
+        <tr><th>受付</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日祝</th></tr>
       </thead>
       <tbody>
-        <tr><th>7:00〜12:00</th><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="closed">休</td></tr>
-        <tr><th>14:30〜18:30</th><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">▲</td><td class="closed">休</td></tr>
+        <tr><th>9:00〜18:00<br>電話でのご相談・見学受付</th><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="mark">●</td><td class="closed">－</td></tr>
       </tbody>
     </table>
-    <p class="hours-note">▲ 土曜日の午後は 14:30〜17:30 までの診療です</p>
+    <p class="hours-note">サービス付き高齢者向け住宅・小規模多機能型居宅介護は24時間体制で職員が対応しています。日曜・祝日のご連絡もお受けしますが、担当者が不在の場合は折り返しのご連絡になることがあります。</p>
     <div class="info-grid">
-      <div class="info-item"><strong>電話</strong><a href="tel:0865250600">086-525-0600</a><br>ご予約・当日受診どちらも可能です</div>
-      <div class="info-item"><strong>住所</strong>〒713-8123<br>岡山県倉敷市玉島柏島920-106<br><a href="https://maps.google.com/?cid=9342176495861149396" target="_blank" rel="noopener">Googleマップで開く</a></div>
+      <div class="info-item"><strong>電話</strong><a href="tel:0865228787">086-522-8787</a><br>見学・空き状況のご相談を承ります</div>
+      <div class="info-item"><strong>住所</strong>〒713-8123<br>岡山県倉敷市玉島柏島920-14<br><a href="https://www.google.com/maps/place/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%B1%E3%82%A2%E3%83%93%E3%83%AC%E3%83%83%E3%82%B8%E3%81%8B%E3%81%97%E3%82%8F%E3%81%98%E3%81%BE/@34.533759,133.6639063,17z" target="_blank" rel="noopener">Googleマップで開く</a></div>
     </div>
+    <p class="hours-note">こはる日和 小規模多機能型居宅介護のお問い合わせは <a href="tel:0865227811">086-522-7811</a> でも承ります。</p>
   </section>
 </main>
 
@@ -227,6 +235,6 @@
   <a class="float-cta__map" href="https://www.google.com/maps/place/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%B1%E3%82%A2%E3%83%93%E3%83%AC%E3%83%83%E3%82%B8%E3%81%8B%E3%81%97%E3%82%8F%E3%81%98%E3%81%BE/@34.533759,133.6639063,17z" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Googleマップで見る</a>
 </div>
 
-<script src="../assets/site.js"></script>
+<script src="../assets/site.js?v=83ffce4e"></script>
 </body>
 </html>
