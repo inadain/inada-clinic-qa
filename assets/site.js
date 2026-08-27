@@ -291,6 +291,7 @@
 (function () {
   'use strict';
   var HOL = ["2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-07-20", "2026-08-11", "2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23", "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-21", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05", "2027-07-19", "2027-08-11", "2027-09-20", "2027-09-23", "2027-10-11", "2027-11-03", "2027-11-23"];
+  window.INADA_HOLIDAYS = HOL;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function hm(m) { return Math.floor(m / 60) + ':' + pad(m % 60); }
@@ -385,4 +386,85 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', mount);
   } else { mount(); }
+})();
+
+/* ---------------------------------------------------------------
+   診療カレンダー（月表示）
+   休診：日曜・祝日・お盆(8/14-15)・年末年始(12/29-1/3)・臨時休診
+   土曜は午後が17:30まで
+   臨時休診は assets/schedule.js に書く
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  var host = document.querySelector('[data-calendar]');
+  if (!host) return;
+
+  var W = ['日', '月', '火', '水', '木', '金', '土'];
+  var cur = new Date();
+  cur = new Date(cur.getFullYear(), cur.getMonth(), 1);
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function iso(y, m, d) { return y + '-' + pad(m) + '-' + pad(d); }
+
+  function cfg() { return window.INADA_SCHEDULE || { closedExtra: [], noteByDate: {} }; }
+
+  function closedReason(y, m, d, w) {
+    var k = iso(y, m, d);
+    if ((cfg().closedExtra || []).indexOf(k) !== -1) return '臨時休診';
+    if (w === 0) return '日曜';
+    if ((window.INADA_HOLIDAYS || []).indexOf(k) !== -1) return '祝日';
+    if (m === 8 && (d === 14 || d === 15)) return 'お盆';
+    if ((m === 12 && d >= 29) || (m === 1 && d <= 3)) return '年末年始';
+    return null;
+  }
+
+  function render() {
+    var y = cur.getFullYear(), m = cur.getMonth() + 1;
+    var first = new Date(y, m - 1, 1).getDay();
+    var last = new Date(y, m, 0).getDate();
+    var now = new Date();
+    var todayKey = iso(now.getFullYear(), now.getMonth() + 1, now.getDate());
+
+    var h = '<div class="cal__bar">' +
+      '<button type="button" class="cal__nav" data-go="-1" aria-label="前の月">‹</button>' +
+      '<span class="cal__title">' + y + '年 ' + m + '月</span>' +
+      '<button type="button" class="cal__nav" data-go="1" aria-label="次の月">›</button>' +
+      '</div><table class="cal"><thead><tr>';
+    for (var i = 0; i < 7; i++) {
+      h += '<th class="cal__w' + i + '">' + W[i] + '</th>';
+    }
+    h += '</tr></thead><tbody><tr>';
+
+    for (var b = 0; b < first; b++) h += '<td class="cal__pad"></td>';
+    for (var d = 1; d <= last; d++) {
+      var w = new Date(y, m - 1, d).getDay();
+      if (w === 0 && d !== 1) h += '</tr><tr>';
+      var k = iso(y, m, d);
+      var why = closedReason(y, m, d, w);
+      var note = (cfg().noteByDate || {})[k];
+      var cls = 'cal__d cal__w' + w + (why ? ' is-closed' : '') + (k === todayKey ? ' is-today' : '');
+      h += '<td class="' + cls + '"><span class="cal__n">' + d + '</span>' +
+        (why ? '<span class="cal__mark">休</span>'
+             : '<span class="cal__mark cal__mark--open">' + (w === 6 ? '▲' : '●') + '</span>') +
+        (note ? '<span class="cal__note">' + note + '</span>' : '') +
+        '</td>';
+    }
+    var tail = (first + last) % 7;
+    if (tail) for (var e = tail; e < 7; e++) h += '<td class="cal__pad"></td>';
+    h += '</tr></tbody></table>' +
+      '<p class="cal__legend">' +
+      '<span><b class="cal__mark--open">●</b> 午前 7:00〜12:00／午後 14:30〜18:30</span>' +
+      '<span><b class="cal__mark--open">▲</b> 土曜は午後 14:30〜17:30</span>' +
+      '<span><b class="cal__mark">休</b> 休診（日曜・祝日・お盆・年末年始）</span>' +
+      '</p>';
+    host.innerHTML = h;
+
+    Array.prototype.forEach.call(host.querySelectorAll('[data-go]'), function (b) {
+      b.addEventListener('click', function () {
+        cur = new Date(cur.getFullYear(), cur.getMonth() + Number(b.getAttribute('data-go')), 1);
+        render();
+      });
+    });
+  }
+  render();
 })();

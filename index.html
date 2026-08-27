@@ -99,6 +99,15 @@
     <p class="search-status" id="search-status"></p>
   </div>
 
+  <section class="news" aria-labelledby="news-h">
+    <h2 id="news-h" class="section-label">お知らせ</h2>
+    <ul class="news__list">
+      <li><time datetime="2026-08-27">2026.08.27</time><span><a href="category/cat-facility.html">介護・施設のご案内を公開しました（メディケアビレッジかしわじま／こはる日和）</a></span></li>
+      <li><time datetime="2026-08-27">2026.08.27</time><span>症状別のQ&amp;Aが114記事になりました。気になる症状から検索できます</span></li>
+      <li><time datetime="2026-08-26">2026.08.26</time><span><a href="category/cat-care.html">介護のご相談についてのQ&amp;Aを追加しました（介護認定・ケアマネジャー・見守りなど）</a></span></li>
+    </ul>
+  </section>
+
   <div class="quick-tags">
     <span class="quick-tags__label">よく見られている症状</span>
     <a href="#" data-q="咳">咳が続く</a>
@@ -800,10 +809,38 @@
     </div>
   </section>
 
+  <!-- 当院の特徴 -->
+  <section class="feat" aria-labelledby="feat-h">
+    <h2 id="feat-h" class="section-label">いなだ医院の特徴</h2>
+    <div class="feat__grid">
+      <div class="feat__item">
+        <span class="feat__no">01</span>
+        <h3>朝7時から診療しています</h3>
+        <p>平日・土曜とも午前7時から受付しています。土曜は午後17時30分まで診療しています。お仕事や学校の前後にも受診いただけます。</p>
+      </div>
+      <div class="feat__item">
+        <span class="feat__no">02</span>
+        <h3>新世代の内視鏡システム</h3>
+        <p>胃・大腸の内視鏡検査に対応しています。鼻から挿入する経鼻内視鏡も行っており、検査についてのご不安もご相談いただけます。</p>
+      </div>
+      <div class="feat__item">
+        <span class="feat__no">03</span>
+        <h3>発熱外来を設けています</h3>
+        <p>発熱や感染性の症状がある場合は、来院前にお電話でご相談ください。他の患者さんと動線を分けてご案内しています。</p>
+      </div>
+      <div class="feat__item">
+        <span class="feat__no">04</span>
+        <h3>通院が難しくなっても続けられます</h3>
+        <p>訪問診療・訪問看護に対応し、同じ法人でデイサービス・小規模多機能・訪問介護・サービス付き高齢者向け住宅も運営しています。<a href="category/cat-facility.html">施設のご案内</a></p>
+      </div>
+    </div>
+  </section>
+
   <!-- 医院情報 -->
   <section class="clinic-info">
     <h2>診療時間・アクセス</h2>
     <div data-today class="today"></div>
+    <div class="cal-wrap" data-calendar></div>
     <table class="hours-table">
       <thead>
         <tr>
@@ -895,6 +932,7 @@
   <a class="float-cta__map" href="https://maps.google.com/?cid=9342176495861149396" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Googleマップで見る</a>
 </div>
 
+<script src="assets/schedule.js"></script>
 <script src="assets/site.js"></script>
 </body>
 </html>

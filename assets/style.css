@@ -1319,3 +1319,85 @@ html[data-fs="l"] .faq-card__excerpt { font-size: 14.6px; }
 .cat-logo { margin: 14px 0 2px; }
 .cat-logo img { width: 100%; max-width: 300px; height: auto; display: block; }
 @media (max-width: 600px) { .cat-logo img { max-width: 230px; } }
+
+/* ===== 診療カレンダー ===== */
+.cal-wrap { margin: 18px 0 6px; }
+.cal__bar {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  margin: 0 0 10px;
+}
+.cal__title { font-family: var(--font-display); font-size: 17px; color: var(--primary-dark); }
+.cal__nav {
+  width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  border: 1px solid var(--border); background: #fff; color: var(--primary-dark);
+  font-size: 19px; line-height: 1;
+}
+.cal__nav:hover { background: var(--primary-light); border-color: var(--primary); }
+table.cal { width: 100%; border-collapse: separate; border-spacing: 3px; table-layout: fixed; }
+table.cal th {
+  font-size: 12px; font-weight: 700; color: var(--text-sub); padding: 4px 0; text-align: center;
+}
+table.cal th.cal__w0, .cal__d.cal__w0 .cal__n { color: #c25b4e; }
+table.cal th.cal__w6, .cal__d.cal__w6 .cal__n { color: #3d6f9e; }
+.cal__d {
+  height: 52px; vertical-align: top; text-align: center; border-radius: 9px;
+  background: #fff; border: 1px solid var(--border); padding: 4px 2px;
+}
+.cal__pad { border: none; background: transparent; }
+.cal__n { display: block; font-size: 13px; line-height: 1.2; }
+.cal__mark { display: block; font-size: 12px; color: var(--text-sub); margin-top: 1px; }
+.cal__mark--open { color: var(--primary); }
+.cal__note { display: block; font-size: 10px; color: #c25b4e; line-height: 1.25; margin-top: 1px; }
+.cal__d.is-closed { background: #f3efe9; border-color: #e6ded2; }
+.cal__d.is-closed .cal__n { color: var(--text-sub); }
+.cal__d.is-closed .cal__mark { color: #b6ada0; font-weight: 700; }
+.cal__d.is-today { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(47,122,107,.16); }
+.cal__legend {
+  display: flex; flex-wrap: wrap; gap: 6px 18px;
+  font-size: 12.5px; color: var(--text-sub); margin: 12px 0 0;
+}
+.cal__legend span { display: inline-flex; align-items: baseline; gap: 5px; white-space: nowrap; }
+.cal__legend b { font-style: normal; flex: 0 0 auto; }
+@media (max-width: 700px) { .cal__legend span { white-space: normal; } }
+@media (max-width: 600px) {
+  .cal__d { height: 46px; border-radius: 7px; }
+  .cal__n { font-size: 12px; }
+  .cal__mark { font-size: 11px; }
+  table.cal { border-spacing: 2px; }
+  .cal__legend { flex-direction: column; gap: 4px; }
+}
+@media print { .cal__nav { display: none; } }
+
+/* ===== お知らせ ===== */
+.news { margin: 24px 0 6px; }
+.news__list { list-style: none; margin: 8px 0 0; padding: 0; }
+.news__list li {
+  display: flex; flex-wrap: wrap; gap: 4px 16px;
+  padding: 11px 2px; border-bottom: 1px solid var(--border);
+  font-size: 14.5px; line-height: 1.75;
+}
+.news__list li:first-child { border-top: 1px solid var(--border); }
+.news__list time { flex: 0 0 84px; color: var(--text-sub); font-size: 13px; padding-top: 2px; }
+.news__list span { flex: 1 1 260px; }
+@media (max-width: 600px) {
+  .news__list li { gap: 2px; }
+  .news__list time { flex: 1 0 100%; }
+}
+
+/* ===== いなだ医院の特徴 ===== */
+.feat { margin: 30px 0 6px; }
+.feat__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+.feat__item {
+  position: relative; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px 20px 18px;
+}
+.feat__no {
+  display: block; font-family: var(--font-display); font-size: 13px; font-weight: 700;
+  color: var(--accent); letter-spacing: .08em; margin-bottom: 6px;
+}
+.feat__item h3 {
+  font-family: var(--font-display); font-size: 16.5px; color: var(--primary-dark);
+  margin: 0 0 8px; line-height: 1.5;
+}
+.feat__item p { font-size: 14px; line-height: 1.9; color: var(--text); margin: 0; }
+@media (max-width: 700px) { .feat__grid { grid-template-columns: 1fr; } }
