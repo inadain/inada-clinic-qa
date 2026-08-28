@@ -1423,7 +1423,7 @@ table.cal th.cal__w6, .cal__d.cal__w6 .cal__n { color: #3d6f9e; }
 /* --- 一覧表示 --- */
 html[data-view="list"] .faq-list { gap: 0; }
 html[data-view="list"] .faq-card {
-  display: flex; align-items: flex-start; gap: 12px;
+  display: flex; align-items: baseline; gap: 12px;
   padding: 11px 14px; border-radius: 0; border: none;
   border-bottom: 1px solid var(--border); box-shadow: none; background: transparent;
 }
@@ -1431,13 +1431,13 @@ html[data-view="list"] .faq-list .faq-card:first-child { border-top: 1px solid v
 html[data-view="list"] .faq-card:hover { background: var(--primary-light); transform: none; box-shadow: none; }
 html[data-view="list"] .faq-card::before { display: none; }
 html[data-view="list"] .faq-card__tag {
-  /* 質問の開始位置をそろえるため、幅を固定する（タグは最長8文字） */
-  flex: 0 0 9.5em; width: 9.5em; box-sizing: border-box;
-  margin: 1px 0 0; font-size: 11.5px; padding: 3px 6px; text-align: center;
+  /* 質問の後ろ（右端）に置き、幅を固定して列としてそろえる（タグは最長8文字） */
+  order: 2; flex: 0 0 9.5em; width: 9.5em; box-sizing: border-box;
+  margin: 0 0 0 auto; font-size: 11.5px; padding: 3px 6px; text-align: center;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 html[data-view="list"] .faq-card__q {
-  flex: 1 1 auto; min-width: 0; margin: 0;
+  order: 1; flex: 1 1 auto; min-width: 0; margin: 0;
   font-size: 14.6px; line-height: 1.6; font-weight: 600;
 }
 html[data-view="list"] .faq-card__excerpt { display: none; }
