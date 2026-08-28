@@ -90,8 +90,16 @@ img { max-width: 100%; display: block; }
   min-height: 340px;
   display: flex;
   align-items: flex-end;
-  background: linear-gradient(180deg, rgba(31,90,78,.15) 0%, rgba(31,90,78,.72) 100%),
+  /* 写真の色を残すため、ベールは色を付けずに黒の濃淡だけにする */
+  background: linear-gradient(180deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.68) 100%),
               url('clinic-exterior.jpg') center 42% / cover no-repeat;
+}
+@media (max-width: 600px) {
+  /* 携帯は写真の見え方が変わり、見出しが明るい部分に重なるためベールを濃くする */
+  .hero-visual {
+    background: linear-gradient(180deg, rgba(0,0,0,.38) 0%, rgba(0,0,0,.76) 100%),
+                url('clinic-exterior.jpg') center 42% / cover no-repeat;
+  }
 }
 .hero-visual__inner {
   max-width: var(--max);
