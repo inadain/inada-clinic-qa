@@ -1491,3 +1491,25 @@ html[data-view="list"] .faq-card__excerpt { display: none; }
   }
 }
 html[data-fs="l"][data-view="list"] .faq-card__q { font-size: 16.4px; }
+
+/* ===== 写真でたどる道順 ===== */
+.route { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; margin: 22px 0 26px; }
+.route figure { margin: 0; }
+.route img {
+  width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover;
+  display: block; border-radius: var(--radius); background: var(--primary-light);
+}
+.route figcaption {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-size: 13.5px; line-height: 1.7; color: var(--text); margin-top: 10px;
+}
+.route figcaption b {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 23px; height: 23px; border-radius: 999px;
+  background: var(--primary); color: #fff;
+  font-size: 12.5px; font-weight: 700; line-height: 1;
+}
+@media (max-width: 600px) {
+  .route { grid-template-columns: 1fr; gap: 8px 0; }
+  .route figcaption { margin-bottom: 14px; }
+}
