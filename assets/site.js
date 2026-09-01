@@ -102,6 +102,9 @@
 
   var timer;
   box.addEventListener('input', function () {
+    // 検索中は見出しの固定を解除する（結果に重なるため）
+    document.documentElement.setAttribute(
+      'data-searching', box.value.trim() ? '1' : '0');
     clearTimeout(timer);
     timer = setTimeout(run, 120);
   });
@@ -507,4 +510,30 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', mount);
   } else { mount(); }
+})();
+
+/* ---------------------------------------------------------------
+   長いページ用の「上へ戻る」。ある程度スクロールしてから出す
+   --------------------------------------------------------------- */
+(function () {
+  'use strict';
+  if (document.querySelector('.to-top')) return;
+  var b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'to-top';
+  b.setAttribute('aria-label', 'ページの先頭へ戻る');
+  b.innerHTML = '&#8593;';
+  b.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    var q = document.getElementById('q');
+    if (q) q.focus();
+  });
+  document.body.appendChild(b);
+
+  function toggle() {
+    if (window.scrollY > 900) { b.classList.add('is-on'); }
+    else { b.classList.remove('is-on'); }
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
 })();
