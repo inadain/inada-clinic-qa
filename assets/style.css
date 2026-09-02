@@ -1163,11 +1163,13 @@ html.force-desktop .mobile-cta { display: none !important; }
     grid-column: 2;
     grid-row: 1 / span 500;
     position: sticky;
-    top: 24px;
+    /* ヘッダー（高さ79px）が固定されているので、その下に来るようにする。
+       24px だと潜り込んで「このページの内容」の見出しが隠れる */
+    top: 95px;
     align-self: start;
     margin: 0;
     padding: 18px 18px 18px 20px;
-    max-height: calc(100vh - 220px);
+    max-height: calc(100vh - 130px);
     overflow-y: auto;
     background: var(--bg);
     border: 1px solid var(--border);
