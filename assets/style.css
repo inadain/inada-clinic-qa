@@ -12,10 +12,11 @@
   --text: #2d2a26;
   --text-sub: #6b6660;
   --border: #e6e0d6;
-  /* 角丸は「面は6px・押せるものは丸」の2種類に絞る。
-     無印4px／星野2px／資生堂0／BoConcept6px を実測したうえでの値 */
-  --radius: 6px;
-  --radius-lg: 6px;
+  /* 角丸は「面は10px・押せるものは丸」の2種類。
+     無印4px／星野2px／資生堂0／BoConcept6px を実測したうえで、
+     高齢の方が読む場所なので少しやわらかい側に寄せている */
+  --radius: 10px;
+  --radius-lg: 10px;
   --shadow: 0 2px 12px rgba(31, 90, 78, 0.06);
   --shadow-hover: 0 8px 26px rgba(31, 90, 78, 0.14);
   --max: 880px;
@@ -264,11 +265,13 @@ article.qa {
 }
 article.qa .qa-question {
   font-family: var(--font-display);
-  font-size: 22px;
-  line-height: 1.55;
+  /* 本文17px・h2が22px。記事の主題なのでいちばん大きくする */
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -.015em;
   color: var(--primary-dark);
-  margin: 0 0 20px;
-  padding-bottom: 18px;
+  margin: 0 0 22px;
+  padding-bottom: 20px;
   border-bottom: 2px dotted var(--border);
 }
 article.qa .qa-question::before { content: "Q "; color: var(--accent); }
@@ -285,16 +288,24 @@ article.qa .qa-question::before { content: "Q "; color: var(--accent); }
 }
 article.qa h2 {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 22px;
   color: var(--primary-dark);
-  margin: 34px 0 12px;
-  padding-left: 13px;
-  border-left: 4px solid var(--accent);
-  line-height: 1.55;
+  margin: 44px 0 16px;
+  padding: 2px 0 2px 15px;
+  border-left: 5px solid var(--accent);
+  line-height: 1.5;
+  letter-spacing: -.01em;
 }
-article.qa p { margin: 0 0 15px; font-size: 15.2px; }
+article.qa h3 {
+  font-family: var(--font-display);
+  font-size: 17.5px;
+  color: var(--primary-dark);
+  margin: 30px 0 10px;
+  line-height: 1.5;
+}
+article.qa p { margin: 0 0 17px; font-size: 17px; letter-spacing: .02em; }
 article.qa ul, article.qa ol { margin: 0 0 16px; padding-left: 1.3em; font-size: 15.2px; }
-article.qa li { margin-bottom: 7px; }
+article.qa li { margin-bottom: 9px; font-size: 16px; letter-spacing: .02em; }
 article.qa li::marker { color: var(--primary); }
 article.qa strong { color: var(--primary-dark); }
 
@@ -815,11 +826,12 @@ section[id], article h2[id] { scroll-margin-top: 76px; }
   body { font-size: 16px; line-height: 1.85; }
   article.qa p,
   article.qa ul,
-  article.qa ol { font-size: 15.5px; }
+  article.qa ol { font-size: 16.4px; }
+  article.qa li { font-size: 16.4px; }
 
   /* 見出しの窮屈さを解消 */
-  article.qa .qa-question { font-size: 20px; line-height: 1.5; }
-  article.qa h2 { font-size: 17px; margin: 30px 0 11px; }
+  article.qa .qa-question { font-size: 24.5px; line-height: 1.45; }
+  article.qa h2 { font-size: 20px; margin: 36px 0 13px; }
 
   /* 目次は折りたためるように（details化した場合の見た目） */
   .toc { padding: 14px 16px; }
@@ -1147,6 +1159,12 @@ html.force-desktop .mobile-cta { display: none !important; }
 }
 
 
+/* 日本語は1行40字前後がいちばん読みやすい。
+   長すぎると次の行の頭に目が戻りにくくなる */
+article.qa > p,
+article.qa > ul,
+article.qa > ol { max-width: 40em; }
+
 /* ===== 目次：広い画面ではサイドバーとして固定する ===== */
 @media (min-width: 1180px) {
   main:has(article.qa) { max-width: 1230px; }
@@ -1316,14 +1334,14 @@ html.force-desktop .mobile-cta { display: none !important; }
 .fontsize button:nth-child(4) { font-size: 16px; }
 
 html[data-fs="s"] article.qa p,
-html[data-fs="s"] article.qa li { font-size: 14px; }
+html[data-fs="s"] article.qa li { font-size: 15px; }
 html[data-fs="s"] .urgency li, html[data-fs="s"] .checklist li,
 html[data-fs="s"] .cmp-table { font-size: 13.2px; }
 
 html[data-fs="l"] article.qa p,
-html[data-fs="l"] article.qa li { font-size: 17.8px; line-height: 2.05; }
-html[data-fs="l"] article.qa h2 { font-size: 19.5px; }
-html[data-fs="l"] article.qa .qa-question { font-size: 24px; }
+html[data-fs="l"] article.qa li { font-size: 19.5px; line-height: 2.05; }
+html[data-fs="l"] article.qa h2 { font-size: 24px; }
+html[data-fs="l"] article.qa .qa-question { font-size: 27px; }
 html[data-fs="l"] .urgency li, html[data-fs="l"] .checklist li { font-size: 16.6px; }
 html[data-fs="l"] .cmp-table { font-size: 15.4px; }
 html[data-fs="l"] .toc li { font-size: 15.4px; }
@@ -1475,7 +1493,8 @@ html[data-view="list"] .faq-card__tag {
 }
 html[data-view="list"] .faq-card__q {
   order: 1; flex: 1 1 auto; min-width: 0; margin: 0;
-  font-size: 14.6px; line-height: 1.6; font-weight: 600;
+  font-size: 16px; line-height: 1.65; font-weight: 600;
+  letter-spacing: .01em;
 }
 html[data-view="list"] .faq-card__excerpt { display: none; }
 @media (max-width: 600px) {
@@ -1485,14 +1504,14 @@ html[data-view="list"] .faq-card__excerpt { display: none; }
     gap: 0; padding: 12px 8px 11px;
   }
   html[data-view="list"] .faq-card__q {
-    font-size: 14.4px; line-height: 1.62; margin: 0 0 5px;
+    font-size: 15.6px; line-height: 1.62; margin: 0 0 5px;
   }
   html[data-view="list"] .faq-card__tag {
     order: 2; flex: 0 0 auto; width: auto; max-width: 100%;
     margin: 0; font-size: 10.5px; padding: 2px 9px;
   }
 }
-html[data-fs="l"][data-view="list"] .faq-card__q { font-size: 16.4px; }
+html[data-fs="l"][data-view="list"] .faq-card__q { font-size: 18.5px; }
 
 /* ===== 写真でたどる道順 ===== */
 .route { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; margin: 22px 0 26px; }
@@ -1547,7 +1566,9 @@ html[data-searching="1"] .more-link { display: none; }
 
 /* ===== 上へ戻る ===== */
 .to-top {
-  position: fixed; right: 16px; bottom: 96px; z-index: 30;
+  /* 右下は電話・地図のボタンが占めているため、左下に置く。
+     右に置くと重なって押せなくなる */
+  position: fixed; left: 18px; bottom: 24px; z-index: 30;
   width: 44px; height: 44px; border-radius: 999px;
   border: 1px solid var(--border); background: rgba(255,255,255,.94);
   color: var(--primary-dark); font-size: 17px; line-height: 1;
@@ -1557,4 +1578,4 @@ html[data-searching="1"] .more-link { display: none; }
 }
 .to-top.is-on { display: flex; }
 .to-top:hover { background: #fff; border-color: var(--primary); }
-@media (max-width: 600px) { .to-top { bottom: 148px; right: 12px; } }
+@media (max-width: 600px) { .to-top { bottom: 76px; left: 12px; } }
