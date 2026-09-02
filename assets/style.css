@@ -275,6 +275,14 @@ article.qa .qa-question {
   border-bottom: 2px dotted var(--border);
 }
 article.qa .qa-question::before { content: "Q "; color: var(--accent); }
+/* 冒頭の回答は記事の結論。リード文として本文より大きく組む */
+article.qa .qa-answer-label + p {
+  font-size: 19px;
+  line-height: 1.95;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
 .qa-answer-label {
   display: inline-block;
   background: var(--primary);
@@ -290,7 +298,7 @@ article.qa h2 {
   font-family: var(--font-display);
   font-size: 22px;
   color: var(--primary-dark);
-  margin: 44px 0 16px;
+  margin: 52px 0 20px;
   padding: 2px 0 2px 15px;
   border-left: 5px solid var(--accent);
   line-height: 1.5;
@@ -303,11 +311,16 @@ article.qa h3 {
   margin: 30px 0 10px;
   line-height: 1.5;
 }
-article.qa p { margin: 0 0 17px; font-size: 17px; letter-spacing: .02em; }
+/* 段落間は行送り（約32px）より広くとる。
+   狭いと段落の切れ目が読み取れず、文章が一続きに見える */
+article.qa p { margin: 0 0 36px; font-size: 17px; letter-spacing: .02em; }
 article.qa ul, article.qa ol { margin: 0 0 16px; padding-left: 1.3em; font-size: 15.2px; }
 article.qa li { margin-bottom: 9px; font-size: 16px; letter-spacing: .02em; }
 article.qa li::marker { color: var(--primary); }
-article.qa strong { color: var(--primary-dark); }
+article.qa strong {
+  color: var(--primary-dark);
+  background: linear-gradient(transparent 68%, rgba(232,163,61,.28) 68%);
+}
 
 /* 受診の目安の強調 */
 article.qa p > strong:only-child {
@@ -828,6 +841,8 @@ section[id], article h2[id] { scroll-margin-top: 76px; }
   article.qa ul,
   article.qa ol { font-size: 16.4px; }
   article.qa li { font-size: 16.4px; }
+  article.qa p { margin-bottom: 34px; }
+  article.qa .qa-answer-label + p { font-size: 17.6px; margin-bottom: 28px; }
 
   /* 見出しの窮屈さを解消 */
   article.qa .qa-question { font-size: 24.5px; line-height: 1.45; }
