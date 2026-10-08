@@ -148,6 +148,13 @@ img { max-width: 100%; display: block; }
   margin: 0 0 12px;
   text-shadow: 0 1px 3px rgba(0,0,0,.5), 0 2px 16px rgba(0,0,0,.45);
 }
+.hero-visual h1 .h1-sub {
+  display: block;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: .95;
+}
 .hero-visual p {
   margin: 0;
   font-size: 14.5px;
@@ -464,6 +471,7 @@ article.qa p > strong:only-child {
   body { font-size: 15.5px; }
   .hero-visual { min-height: 270px; }
   .hero-visual h1 { font-size: 23px; }
+  .hero-visual h1 .h1-sub { font-size: 15px; }
   .hero-visual__inner { padding: 30px 18px 26px; }
   .site-header__sub { display: none; }
   .site-header__cta .btn { padding: 8px 12px; font-size: 12px; }
